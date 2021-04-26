@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XamarinApp
+namespace XamarinApp.Extensions
 {
     [ContentProperty("Source")]
     class ImageResourceExtension : IMarkupExtension

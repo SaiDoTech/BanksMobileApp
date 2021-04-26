@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinApp.Extensions"
+             x:Class="XamarinApp.View.Pages.LoginPage">
+    <ContentPage.Content>
+        
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="{local:ImageResource XamarinApp.View.Images.BankAppLogo.png}" />
+
+            <Entry Placeholder="{local:Translate Login_NameEntry_PH}"
+                   WidthRequest="220"
+                   HorizontalOptions="Center"
+                   TextColor="#040200"
+                   Margin="20, 10, 20, 0"/>
+            <Entry Placeholder="{local:Translate Login_KeyEntry_PH}"
+                   WidthRequest="220"
+                   IsPassword="True"
+                   HorizontalOptions="Center"
+                   TextColor="#040200"
+                   Margin="20, 5, 20, 0"/>
+            <Button Text="{local:Translate Login_LoginPutton_T}"
+                    BackgroundColor="#E72C28"
+                    WidthRequest="220"
+                    HorizontalOptions="Center"
+                    Margin="20, 5, 20, 0"
+                    Clicked="OnLogButtonClicked"/>
+            <Label Text="{local:Translate Login_RegLabel_T}"
+                   HorizontalOptions="Center"
+                   Margin="0, 5, 0, 0"
+                   TextColor="#040200" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
