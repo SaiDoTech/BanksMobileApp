@@ -20,12 +20,14 @@
                    TextColor="#040200"
                    Margin="20, 5, 20, 0"/>
             <Button Text="{local:Translate Login_LoginPutton_T}"
+                    TextColor="WhiteSmoke"
                     BackgroundColor="#E72C28"
                     WidthRequest="220"
                     HorizontalOptions="Center"
                     Margin="20, 5, 20, 0"
                     Clicked="OnLogButtonClicked"/>
-            <Label Text="{local:Translate Login_RegLabel_T}"
+            <Label x:Name="registryLabel"
+                   Text="{local:Translate Login_RegLabel_T}"
                    HorizontalOptions="Center"
                    Margin="0, 5, 0, 0"
                    TextColor="#040200" />

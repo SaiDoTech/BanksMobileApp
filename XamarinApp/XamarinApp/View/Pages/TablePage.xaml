@@ -4,9 +4,44 @@
              x:Class="XamarinApp.View.Pages.TablePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="TablePage!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <Picker x:Name="sortPicker"
+                    FontSize="Title"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="10,8,10,0">
+                <Picker.Items>
+                    <x:String>Sort By Sell</x:String>
+                    <x:String>Sort By Buy</x:String>
+                    <x:String>Show Mine</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Grid Margin="10,0,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Bank" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Currency" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Buy" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2"/>
+                <Label Text="Sell" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="3"/>
+            </Grid>
+
+            <ScrollView>
+                <StackLayout x:Name="bankStack"
+                             Spacing="2">
+                    
+                </StackLayout>
+            </ScrollView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

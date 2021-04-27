@@ -10,14 +10,14 @@ using Xamarin.Forms.Xaml;
 namespace XamarinApp.View.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SettingsPage : ContentPage
+    public partial class RegistryPage : ContentPage
     {
-        public SettingsPage()
+        public RegistryPage()
         {
             InitializeComponent();
 
-            settingsPicker.SelectedIndex = 0;
-            settingsPicker.TextColor = Color.FromHex("040200");
+            registryPicker.SelectedIndex = 0;
+            registryPicker.TextColor = Color.FromHex("040200");
         }
     }
 }

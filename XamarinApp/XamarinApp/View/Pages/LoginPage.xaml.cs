@@ -15,6 +15,22 @@ namespace XamarinApp.View.Pages
         public LoginPage()
         {
             InitializeComponent();
+
+            TapGestureRecognizer tapGesture = new TapGestureRecognizer
+            {
+                NumberOfTapsRequired = 1
+            };
+            tapGesture.Tapped += (s, e) =>
+            {
+                registryLabel.TextColor = Color.FromHex("E72C28");
+                Navigation.PushModalAsync(new RegistryPage());
+            };
+            registryLabel.GestureRecognizers.Add(tapGesture);
+        }
+
+        protected override void OnAppearing()
+        {
+            registryLabel.TextColor = Color.FromHex("040200");
         }
 
         private void OnLogButtonClicked(object sender, EventArgs e)

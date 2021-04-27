@@ -4,9 +4,11 @@
              xmlns:local="clr-namespace:XamarinApp.View.Pages"
              xmlns:local2="clr-namespace:XamarinApp.Extensions"
              x:Class="XamarinApp.View.Pages.NoScrollTabbedPage">
+
     <TabbedPage.Children>
         <local:SettingsPage IconImageSource="{local2:ImageResource XamarinApp.View.Images.SettingsIcon.png}"/>
         <local:MapPage IconImageSource="{local2:ImageResource XamarinApp.View.Images.MapIcon.png}"/>
         <local:TablePage IconImageSource="{local2:ImageResource XamarinApp.View.Images.TableIcon.png}"/>
     </TabbedPage.Children>
+
 </TabbedPage>

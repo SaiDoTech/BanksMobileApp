@@ -21,6 +21,9 @@ namespace XamarinApp.View.Pages
 
             this.On<Xamarin.Forms.PlatformConfiguration.Android>().SetIsSwipePagingEnabled(false);
             this.On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+
+            this.SelectedTabColor = Color.FromHex("E72C28");
+            this.UnselectedTabColor = Color.FromHex("040200");
         }
     }
 }

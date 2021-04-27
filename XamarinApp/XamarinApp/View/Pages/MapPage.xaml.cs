@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 
 namespace XamarinApp.View.Pages
@@ -15,6 +16,9 @@ namespace XamarinApp.View.Pages
         public MapPage()
         {
             InitializeComponent();
+
+            Map map = new Map();
+            Content = map;
         }
     }
 }
