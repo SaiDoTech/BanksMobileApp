@@ -15,6 +15,32 @@
                 </Picker.Items>
             </Picker>
 
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="langLabel"
+                            Text="Language:" 
+                            FontSize="Medium" 
+                            VerticalTextAlignment="Center" />
+                <Picker x:Name="langPicker"
+                            HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="themeLabel" 
+                            Text="Theme:"
+                            FontSize="Medium"
+                            VerticalTextAlignment="Center" />
+                <Picker x:Name="themePicker"
+                            HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="decimalLabel" 
+                            Text="Decimal places:"
+                            FontSize="Medium"
+                            VerticalTextAlignment="Center" />
+                <Stepper Minimum="0" Maximum="10" Increment="0.1"/>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

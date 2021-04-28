@@ -45,14 +45,18 @@ namespace XamarinApp.Model
 
             this.LogoPath = null;
 
-            foreach (var currency in currencies)
+            if (currencies.Count > 0)
             {
-                if (currency != null)
+                exchanges = new List<CurrencyExchange>();
+                foreach (var currency in currencies)
                 {
-                    this.exchanges.Add(currency);
+                    if (currency != null)
+                    {
+                        this.exchanges.Add(currency);
+                    }
+                    else
+                        throw new Exception("Wrong currency format!");
                 }
-                else
-                    throw new Exception("Wrong currency format!");
             }
         }
     }
