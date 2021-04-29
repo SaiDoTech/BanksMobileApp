@@ -22,7 +22,7 @@ namespace XamarinApp.LangResource {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource {
+    public class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace XamarinApp.LangResource {
         ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("XamarinApp.LangResource.Resource", typeof(Resource).Assembly);
@@ -51,7 +51,7 @@ namespace XamarinApp.LangResource {
         ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace XamarinApp.LangResource {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Verification key.
         /// </summary>
-        internal static string Login_KeyEntry_PH {
+        public static string Login_KeyEntry_PH {
             get {
                 return ResourceManager.GetString("Login_KeyEntry_PH", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace XamarinApp.LangResource {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Login.
         /// </summary>
-        internal static string Login_LoginPutton_T {
+        public static string Login_LoginPutton_T {
             get {
                 return ResourceManager.GetString("Login_LoginPutton_T", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace XamarinApp.LangResource {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Bank&apos;s name.
         /// </summary>
-        internal static string Login_NameEntry_PH {
+        public static string Login_NameEntry_PH {
             get {
                 return ResourceManager.GetString("Login_NameEntry_PH", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace XamarinApp.LangResource {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Registry.
         /// </summary>
-        internal static string Login_RegLabel_T {
+        public static string Login_RegLabel_T {
             get {
                 return ResourceManager.GetString("Login_RegLabel_T", resourceCulture);
             }

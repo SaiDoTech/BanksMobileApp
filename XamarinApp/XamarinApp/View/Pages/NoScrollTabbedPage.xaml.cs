@@ -11,7 +11,7 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 namespace XamarinApp.View.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NoScrollTabbedPage : Xamarin.Forms.TabbedPage
+    public partial class NoScrollTabbedPage : Xamarin.Forms.TabbedPage, IDynamicPage
     {
         public NoScrollTabbedPage()
         {
@@ -22,8 +22,22 @@ namespace XamarinApp.View.Pages
             this.On<Xamarin.Forms.PlatformConfiguration.Android>().SetIsSwipePagingEnabled(false);
             this.On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
-            this.SelectedTabColor = Color.FromHex("E72C28");
-            this.UnselectedTabColor = Color.FromHex("040200");
+            ReColor();
+        }
+
+        public void ReColor()
+        {
+            this.BackgroundColor = App.ThemeController.CurrentTheme.BackColor;
+            this.SelectedTabColor = App.ThemeController.CurrentTheme.ActiveColor;
+            this.UnselectedTabColor = App.ThemeController.CurrentTheme.FontColor;
+        }
+
+        public void ReFont()
+        {
+        }
+
+        public void ReTranslate()
+        {
         }
     }
 }

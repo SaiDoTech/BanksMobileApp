@@ -25,6 +25,16 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
+                <Label x:Name="fontLabel"
+                            Text="Font:"
+                            FontSize="Medium" 
+                            VerticalTextAlignment="Center" />
+                <Picker x:Name="fontPicker"
+                            HorizontalOptions="FillAndExpand"
+                            SelectedIndexChanged="fontPicker_SelectedIndexChanged"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
                 <Label x:Name="themeLabel" 
                             Text="Theme:"
                             FontSize="Medium"
@@ -38,7 +48,7 @@
                             Text="Decimal places:"
                             FontSize="Medium"
                             VerticalTextAlignment="Center" />
-                <Stepper Minimum="0" Maximum="10" Increment="0.1"/>
+                <Stepper Minimum="0" Maximum="4" Increment="1" Value="2" ValueChanged="Stepper_ValueChanged"/>
             </StackLayout>
 
         </StackLayout>

@@ -11,6 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Lobster-Regular.ttf" />
+    <None Remove="View\Fonts\Arial.ttf" />
+    <None Remove="View\Fonts\Helvetica.ttf" />
+    <None Remove="View\Fonts\Kirucoupage.otf" />
     <None Remove="View\Images\BankAppLogo.png" />
     <None Remove="View\Images\MapIcon.png" />
     <None Remove="View\Images\SettingsIcon.png" />
@@ -18,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="View\Fonts\Arial.ttf" />
+    <EmbeddedResource Include="View\Fonts\Helvetica.ttf" />
+    <EmbeddedResource Include="View\Fonts\Kirucoupage.otf" />
+    <EmbeddedResource Include="View\Fonts\Lobster-Regular.ttf" />
     <EmbeddedResource Include="View\Images\BankAppLogo.png" />
     <EmbeddedResource Include="View\Images\MapIcon.png" />
     <EmbeddedResource Include="View\Images\SettingsIcon.png" />
@@ -41,7 +49,7 @@
 
   <ItemGroup>
     <EmbeddedResource Update="LangResource\Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Pages\LoginPage.xaml">
