@@ -9,13 +9,15 @@ namespace XamarinApp.View
     {
         public string Title { get; private set; }
         public Color BackColor { get; private set; }
+        public Color AddColor { get; private set; }
         public Color ActiveColor { get; private set; }
         public Color FontColor { get; private set; }
 
-        public AppTheme(string title, Color back, Color act, Color font)
+        public AppTheme(string title, Color back, Color add, Color act, Color font)
         {
             Title = title;
             BackColor = back;
+            AddColor = add;
             ActiveColor = act;
             FontColor = font;
         }

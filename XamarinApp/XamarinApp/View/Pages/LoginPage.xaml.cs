@@ -43,7 +43,7 @@ namespace XamarinApp.View.Pages
 
         public void ReColor()
         {
-            this.BackgroundColor = App.ThemeController.CurrentTheme.BackColor;
+            this.BackgroundColor = App.ThemeController.CurrentTheme.AddColor;
 
             loginEntry.TextColor = App.ThemeController.CurrentTheme.FontColor;
             loginEntry.TextColor = App.ThemeController.CurrentTheme.FontColor;

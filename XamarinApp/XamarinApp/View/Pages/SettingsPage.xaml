@@ -15,41 +15,59 @@
                 </Picker.Items>
             </Picker>
 
-            <StackLayout Orientation="Horizontal">
-                <Label x:Name="langLabel"
+            <Label x:Name="interfaceLabel"
+                   FontSize="Medium" 
+                   Text="Interface:"/>
+
+            <Frame x:Name="interfaceFrame"
+                   Padding="3,3,3,3">
+                <StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="langLabel"
                             Text="Language:" 
                             FontSize="Medium" 
                             VerticalTextAlignment="Center" />
-                <Picker x:Name="langPicker"
+                        <Picker x:Name="langPicker"
                             HorizontalOptions="FillAndExpand"/>
-            </StackLayout>
+                    </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
-                <Label x:Name="fontLabel"
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="fontLabel"
                             Text="Font:"
                             FontSize="Medium" 
                             VerticalTextAlignment="Center" />
-                <Picker x:Name="fontPicker"
+                        <Picker x:Name="fontPicker"
                             HorizontalOptions="FillAndExpand"
                             SelectedIndexChanged="fontPicker_SelectedIndexChanged"/>
-            </StackLayout>
+                    </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
-                <Label x:Name="themeLabel" 
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="themeLabel" 
                             Text="Theme:"
                             FontSize="Medium"
                             VerticalTextAlignment="Center" />
-                <Picker x:Name="themePicker"
+                        <Picker x:Name="themePicker"
                             HorizontalOptions="FillAndExpand"/>
-            </StackLayout>
+                    </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
-                <Label x:Name="decimalLabel" 
-                            Text="Decimal places:"
-                            FontSize="Medium"
-                            VerticalTextAlignment="Center" />
-                <Stepper Minimum="0" Maximum="4" Increment="1" Value="2" ValueChanged="Stepper_ValueChanged"/>
-            </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Label x:Name="appLabel"
+                   FontSize="Medium" 
+                   Text="App:"/>
+
+            <Frame x:Name="appFrame"
+                   Padding="3,3,3,3">
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="decimalLabel" 
+                                Text="Decimal places:"
+                                FontSize="Medium"
+                                VerticalTextAlignment="Center" />
+                    <Stepper Minimum="0" Maximum="4" Increment="1" Value="2" ValueChanged="Stepper_ValueChanged"/>
+                </StackLayout>
+            </Frame>
 
         </StackLayout>
     </ContentPage.Content>

@@ -32,6 +32,7 @@ namespace XamarinApp.View.Pages
             settingsPicker.TextColor = App.ThemeController.CurrentTheme.FontColor;
 
             ReTranslate();
+            ReColor();
         }
 
         private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
@@ -59,7 +60,12 @@ namespace XamarinApp.View.Pages
 
         public void ReColor()
         {
+            this.BackgroundColor = App.ThemeController.CurrentTheme.BackColor;
 
+            interfaceFrame.BackgroundColor = App.ThemeController.CurrentTheme.AddColor;
+            interfaceFrame.BorderColor = App.ThemeController.CurrentTheme.AddColor;
+            appFrame.BackgroundColor = App.ThemeController.CurrentTheme.AddColor;
+            appFrame.BorderColor = App.ThemeController.CurrentTheme.AddColor;
         }
     }
 }

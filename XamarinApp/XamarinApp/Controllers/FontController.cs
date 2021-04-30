@@ -15,7 +15,6 @@ namespace XamarinApp.Controllers
             AppFonts = new List<string>()
             {
                 "Arial",
-                "Helvetica",
                 "Kirucoupage",
                 "Lobster"
             };
