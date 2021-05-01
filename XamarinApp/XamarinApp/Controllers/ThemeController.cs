@@ -7,7 +7,7 @@ namespace XamarinApp.Controllers
 {
     public class ThemeController
     {
-        public AppTheme CurrentTheme { get; private set; }
+        public AppTheme CurrentTheme { get; set; }
 
         public List<AppTheme> AppThemes { get; private set; }
 

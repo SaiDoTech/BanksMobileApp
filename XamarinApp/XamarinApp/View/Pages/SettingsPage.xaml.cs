@@ -13,29 +13,27 @@ namespace XamarinApp.View.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingsPage : ContentPage
     {
-        public static FontController fontController;
-        public static LanguageController languageController;
+        public static UIBind uIBind;
 
         public SettingsPage()
         {
-            fontController = App.FontController;
-            languageController = App.LangController;
+            uIBind = new UIBind(App.FontController, App.LangController, App.ThemeController);
 
             InitializeComponent();
 
-            foreach (var lang in languageController.AppLanguages)
+            foreach (var lang in uIBind.languageController.AppLanguages)
             {
                 langPicker.Items.Add(lang.Title);
             }
             langPicker.SelectedIndex = 0;
 
-            foreach (var theme in App.ThemeController.AppThemes)
+            foreach (var theme in uIBind.themeController.AppThemes)
             {
                 themePicker.Items.Add(theme.Title);
             }
             themePicker.SelectedIndex = 0;
 
-            foreach (var font in fontController.AppFonts)
+            foreach (var font in uIBind.fontController.AppFonts)
             {
                 fontPicker.Items.Add(font);
             }
@@ -53,12 +51,21 @@ namespace XamarinApp.View.Pages
 
         private void fontPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            fontController.ChangeFont(fontPicker.SelectedIndex);
+            uIBind.fontController.ChangeFont(fontPicker.SelectedIndex);
+            uIBind.OnPropertyChanged("CurrentFont");
         }
 
         private void langPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            languageController.SetNewCulture(langPicker.SelectedIndex);
+            uIBind.languageController.SetNewCulture(langPicker.SelectedIndex);
+        }
+
+        private void themePicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            uIBind.themeController.ChangeTheme(themePicker.SelectedIndex);
+            uIBind.OnPropertyChanged("FontColor");
+            uIBind.OnPropertyChanged("BackColor");
+            uIBind.OnPropertyChanged("AddColor");
         }
     }
 }

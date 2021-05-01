@@ -6,24 +6,11 @@ using System.ComponentModel;
 
 namespace XamarinApp.Controllers
 {
-    public class FontController : INotifyPropertyChanged
+    public class FontController
     {
-        private string currentFont;
+        public string CurrentFont { get; set; }
 
         public List<string> AppFonts { get; private set; }
-
-        public string CurrentFont
-        {
-            get { return currentFont; }
-            set
-            {
-                if (currentFont != value)
-                {
-                    currentFont = value;
-                    OnPropertyChanged("CurrentFont");
-                }
-            }
-        }
 
         public FontController()
         {
@@ -34,14 +21,7 @@ namespace XamarinApp.Controllers
                 "Lobster"
             };
 
-            currentFont = AppFonts[0];
-            OnPropertyChanged("CurrentFont");
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged(string prop = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+            CurrentFont = AppFonts[0];
         }
 
         public void ChangeFont(int indx)
@@ -49,7 +29,6 @@ namespace XamarinApp.Controllers
             if ((indx >= 0) && (indx < AppFonts.Count))
             {
                 CurrentFont = AppFonts[indx];
-                OnPropertyChanged("CurrentFont");
             }
         }
     }
