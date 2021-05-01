@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinApp.View.Pages"
              x:Class="XamarinApp.View.Pages.SettingsPage">
     <ContentPage.Content>
         <StackLayout Padding="10,8,10,10">
 
             <Picker x:Name="settingsPicker"
+                    BindingContext="{x:Static local:SettingsPage.fontController}"
+                    FontFamily="{Binding Path=CurrentFont}"
                     FontSize="Title"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
@@ -16,38 +19,53 @@
             </Picker>
 
             <Label x:Name="interfaceLabel"
+                   BindingContext="{x:Static local:SettingsPage.fontController}"
+                   FontFamily="{Binding Path=CurrentFont}"
                    FontSize="Medium" 
                    Text="Interface:"/>
 
             <Frame x:Name="interfaceFrame"
-                   Padding="3,3,3,3">
+                   Padding="7,3,7,3">
                 <StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <Label x:Name="langLabel"
+                            BindingContext="{x:Static local:SettingsPage.fontController}"
+                            FontFamily="{Binding Path=CurrentFont}"
                             Text="Language:" 
                             FontSize="Medium" 
                             VerticalTextAlignment="Center" />
                         <Picker x:Name="langPicker"
-                            HorizontalOptions="FillAndExpand"/>
+                            BindingContext="{x:Static local:SettingsPage.fontController}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            HorizontalOptions="FillAndExpand"
+                            SelectedIndexChanged="langPicker_SelectedIndexChanged"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <Label x:Name="fontLabel"
+                            BindingContext="{x:Static local:SettingsPage.fontController}"
+                            FontFamily="{Binding Path=CurrentFont}"
                             Text="Font:"
                             FontSize="Medium" 
                             VerticalTextAlignment="Center" />
                         <Picker x:Name="fontPicker"
+                            BindingContext="{x:Static local:SettingsPage.fontController}"
+                            FontFamily="{Binding Path=CurrentFont}"
                             HorizontalOptions="FillAndExpand"
                             SelectedIndexChanged="fontPicker_SelectedIndexChanged"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Label x:Name="themeLabel" 
+                        <Label x:Name="themeLabel"
+                            BindingContext="{x:Static local:SettingsPage.fontController}"
+                            FontFamily="{Binding Path=CurrentFont}"
                             Text="Theme:"
                             FontSize="Medium"
                             VerticalTextAlignment="Center" />
                         <Picker x:Name="themePicker"
+                            BindingContext="{x:Static local:SettingsPage.fontController}"
+                            FontFamily="{Binding Path=CurrentFont}"
                             HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
 
@@ -55,18 +73,49 @@
             </Frame>
 
             <Label x:Name="appLabel"
+                   BindingContext="{x:Static local:SettingsPage.fontController}"
+                   FontFamily="{Binding Path=CurrentFont}"
                    FontSize="Medium" 
                    Text="App:"/>
 
             <Frame x:Name="appFrame"
-                   Padding="3,3,3,3">
-                <StackLayout Orientation="Horizontal">
-                    <Label x:Name="decimalLabel" 
+                   Padding="7,3,7,3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Orientation="Horizontal"
+                                 Grid.Row="0"
+                                 Grid.Column="0">
+                        <Label x:Name="decimalLabel" 
+                                BindingContext="{x:Static local:SettingsPage.fontController}"
+                                FontFamily="{Binding Path=CurrentFont}"
                                 Text="Decimal places:"
                                 FontSize="Medium"
                                 VerticalTextAlignment="Center" />
-                    <Stepper Minimum="0" Maximum="4" Increment="1" Value="2" ValueChanged="Stepper_ValueChanged"/>
-                </StackLayout>
+                        <Label x:Name="signLabel"
+                                BindingContext="{x:Static local:SettingsPage.fontController}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                Text="Decimal places:"
+                                FontSize="Medium"
+                                VerticalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <Stepper x:Name="decimalStepper"
+                             HorizontalOptions="End"
+                             Grid.Row="0"
+                             Grid.Column="1"
+                             Minimum="0" 
+                             Maximum="4" 
+                             Increment="1" 
+                             Value="2"
+                             ValueChanged="Stepper_ValueChanged"/>
+                </Grid>
             </Frame>
 
         </StackLayout>

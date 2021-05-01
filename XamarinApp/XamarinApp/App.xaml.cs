@@ -12,12 +12,14 @@ namespace XamarinApp
         public static App CurrentApp { get; private set; }
         public static ThemeController ThemeController { get; private set; }
         public static FontController FontController { get; private set; }
+        public static LanguageController LangController { get; private set; }
 
         public App()
         {
             CurrentApp = this;
             ThemeController = new ThemeController();
             FontController = new FontController();
+            LangController = new LanguageController();
 
             InitializeComponent();
 

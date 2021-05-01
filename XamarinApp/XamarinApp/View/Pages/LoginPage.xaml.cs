@@ -11,7 +11,7 @@ using XamarinApp.LangResource;
 namespace XamarinApp.View.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage, IDynamicPage
+    public partial class LoginPage : ContentPage
     {
         public LoginPage()
         {

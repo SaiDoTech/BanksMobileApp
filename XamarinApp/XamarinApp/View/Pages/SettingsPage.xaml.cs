@@ -6,21 +6,28 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinApp.Controllers;
 
 namespace XamarinApp.View.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SettingsPage : ContentPage, IDynamicPage
+    public partial class SettingsPage : ContentPage
     {
+        public static FontController fontController;
+        public static LanguageController languageController;
+
         public SettingsPage()
         {
+            fontController = App.FontController;
+            languageController = App.LangController;
+
             InitializeComponent();
 
-            foreach (var font in App.FontController.AppFonts)
+            foreach (var lang in languageController.AppLanguages)
             {
-                fontPicker.Items.Add(font);
+                langPicker.Items.Add(lang.Title);
             }
-            fontPicker.SelectedIndex = 0;
+            langPicker.SelectedIndex = 0;
 
             foreach (var theme in App.ThemeController.AppThemes)
             {
@@ -28,44 +35,30 @@ namespace XamarinApp.View.Pages
             }
             themePicker.SelectedIndex = 0;
 
-            settingsPicker.SelectedIndex = 0;
-            settingsPicker.TextColor = App.ThemeController.CurrentTheme.FontColor;
+            foreach (var font in fontController.AppFonts)
+            {
+                fontPicker.Items.Add(font);
+            }
+            fontPicker.SelectedIndex = 0;
 
-            ReTranslate();
-            ReColor();
+            settingsPicker.SelectedIndex = 0;
+
+            signLabel.Text = decimalStepper.Value.ToString();
         }
 
         private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
         {
+            signLabel.Text = decimalStepper.Value.ToString();
         }
 
         private void fontPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            App.FontController.ChangeFont(fontPicker.SelectedIndex);
-
-            ReFont();
+            fontController.ChangeFont(fontPicker.SelectedIndex);
         }
 
-        public void ReFont()
+        private void langPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            settingsPicker.FontFamily = App.FontController.CurrentFont;
-
-            fontLabel.FontFamily = App.FontController.CurrentFont;
-        }
-
-        public void ReTranslate()
-        {
-
-        }
-
-        public void ReColor()
-        {
-            this.BackgroundColor = App.ThemeController.CurrentTheme.BackColor;
-
-            interfaceFrame.BackgroundColor = App.ThemeController.CurrentTheme.AddColor;
-            interfaceFrame.BorderColor = App.ThemeController.CurrentTheme.AddColor;
-            appFrame.BackgroundColor = App.ThemeController.CurrentTheme.AddColor;
-            appFrame.BorderColor = App.ThemeController.CurrentTheme.AddColor;
+            languageController.SetNewCulture(langPicker.SelectedIndex);
         }
     }
 }
