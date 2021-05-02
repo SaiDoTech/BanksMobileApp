@@ -95,5 +95,68 @@ namespace XamarinApp.LangResource {
                 return ResourceManager.GetString("Login_RegLabel_T", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Accuracy.
+        /// </summary>
+        public static string Settings_AccuracyLabel_T {
+            get {
+                return ResourceManager.GetString("Settings_AccuracyLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на App.
+        /// </summary>
+        public static string Settings_AppLabel_T {
+            get {
+                return ResourceManager.GetString("Settings_AppLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Font.
+        /// </summary>
+        public static string Settings_FontLabel_T {
+            get {
+                return ResourceManager.GetString("Settings_FontLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Interface.
+        /// </summary>
+        public static string Settings_IntfLable_T {
+            get {
+                return ResourceManager.GetString("Settings_IntfLable_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Language.
+        /// </summary>
+        public static string Settings_LangLabel_T {
+            get {
+                return ResourceManager.GetString("Settings_LangLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Settings.
+        /// </summary>
+        public static string Settings_SettLabel_T {
+            get {
+                return ResourceManager.GetString("Settings_SettLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Theme.
+        /// </summary>
+        public static string Settings_ThemeLabel_T {
+            get {
+                return ResourceManager.GetString("Settings_ThemeLabel_T", resourceCulture);
+            }
+        }
     }
 }

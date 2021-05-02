@@ -2,48 +2,46 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinApp.View.Pages"
+             xmlns:local2="clr-namespace:XamarinApp"
              x:Class="XamarinApp.View.Pages.SettingsPage"
-             BindingContext="{x:Static local:SettingsPage.uIBind}"
+             
+             BindingContext="{x:Static local2:App.UIBind}"
              BackgroundColor="{Binding Path=BackColor}">
     <ContentPage.Content>
         <StackLayout Padding="10,8,10,10">
 
-            <Picker x:Name="settingsPicker"
-                    BindingContext="{x:Static local:SettingsPage.uIBind}"
+            <Label x:Name="settingsLabel"
+                    BindingContext="{x:Static local2:App.UIBind}"
                     FontFamily="{Binding Path=CurrentFont}"
                     TextColor="{Binding Path=FontColor}"
                     FontSize="Title"
+                    TextDecorations="Underline"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     HorizontalOptions="FillAndExpand">
-                <Picker.Items>
-                    <x:String>Settings</x:String>
-                </Picker.Items>
-            </Picker>
+            </Label>
 
             <Label x:Name="interfaceLabel"
-                   BindingContext="{x:Static local:SettingsPage.uIBind}"
+                   BindingContext="{x:Static local2:App.UIBind}"
                    FontFamily="{Binding Path=CurrentFont}"
                    TextColor="{Binding Path=FontColor}"
-                   FontSize="Medium" 
-                   Text="Interface:"/>
+                   FontSize="Medium"/>
 
             <Frame x:Name="interfaceFrame"
-                   BindingContext="{x:Static local:SettingsPage.uIBind}"
+                   BindingContext="{x:Static local2:App.UIBind}"
                    BackgroundColor="{Binding Path=AddColor}"
                    Padding="7,3,7,3">
                 <StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <Label x:Name="langLabel"
-                            BindingContext="{x:Static local:SettingsPage.uIBind}"
+                            BindingContext="{x:Static local2:App.UIBind}"
                             FontFamily="{Binding Path=CurrentFont}"
                             TextColor="{Binding Path=FontColor}"
-                            Text="Language:" 
                             FontSize="Medium" 
                             VerticalTextAlignment="Center" />
                         <Picker x:Name="langPicker"
-                            BindingContext="{x:Static local:SettingsPage.uIBind}"
+                            BindingContext="{x:Static local2:App.UIBind}"
                             FontFamily="{Binding Path=CurrentFont}"
                             TextColor="{Binding Path=FontColor}"
                             HorizontalOptions="FillAndExpand"
@@ -52,14 +50,13 @@
 
                     <StackLayout Orientation="Horizontal">
                         <Label x:Name="fontLabel"
-                            BindingContext="{x:Static local:SettingsPage.uIBind}"
+                            BindingContext="{x:Static local2:App.UIBind}"
                             FontFamily="{Binding Path=CurrentFont}"
                             TextColor="{Binding Path=FontColor}" 
-                            Text="Font:"
                             FontSize="Medium" 
                             VerticalTextAlignment="Center" />
                         <Picker x:Name="fontPicker"
-                            BindingContext="{x:Static local:SettingsPage.uIBind}"
+                            BindingContext="{x:Static local2:App.UIBind}"
                             FontFamily="{Binding Path=CurrentFont}"
                             TextColor="{Binding Path=FontColor}"
                             HorizontalOptions="FillAndExpand"
@@ -68,14 +65,13 @@
 
                     <StackLayout Orientation="Horizontal">
                         <Label x:Name="themeLabel"
-                            BindingContext="{x:Static local:SettingsPage.uIBind}"
+                            BindingContext="{x:Static local2:App.UIBind}"
                             FontFamily="{Binding Path=CurrentFont}"
                             TextColor="{Binding Path=FontColor}"
-                            Text="Theme:"
                             FontSize="Medium"
                             VerticalTextAlignment="Center" />
                         <Picker x:Name="themePicker"
-                            BindingContext="{x:Static local:SettingsPage.uIBind}"
+                            BindingContext="{x:Static local2:App.UIBind}"
                             FontFamily="{Binding Path=CurrentFont}"
                             TextColor="{Binding Path=FontColor}"
                             HorizontalOptions="FillAndExpand"
@@ -86,14 +82,13 @@
             </Frame>
 
             <Label x:Name="appLabel"
-                   BindingContext="{x:Static local:SettingsPage.uIBind}"
+                   BindingContext="{x:Static local2:App.UIBind}"
                    FontFamily="{Binding Path=CurrentFont}"
                    TextColor="{Binding Path=FontColor}"
-                   FontSize="Medium" 
-                   Text="App:"/>
+                   FontSize="Medium"/>
 
             <Frame x:Name="appFrame"
-                   BindingContext="{x:Static local:SettingsPage.uIBind}"
+                   BindingContext="{x:Static local2:App.UIBind}"
                    BackgroundColor="{Binding Path=AddColor}"
                    Padding="7,3,7,3">
                 <Grid>
@@ -108,18 +103,16 @@
                     <StackLayout Orientation="Horizontal"
                                  Grid.Row="0"
                                  Grid.Column="0">
-                        <Label x:Name="decimalLabel" 
-                                BindingContext="{x:Static local:SettingsPage.uIBind}"
+                        <Label x:Name="accuracyLabel" 
+                                BindingContext="{x:Static local2:App.UIBind}"
                                 FontFamily="{Binding Path=CurrentFont}"
                                 TextColor="{Binding Path=FontColor}"
-                                Text="Decimal places:"
                                 FontSize="Medium"
                                 VerticalTextAlignment="Center" />
                         <Label x:Name="signLabel"
-                                BindingContext="{x:Static local:SettingsPage.uIBind}"
+                                BindingContext="{x:Static local2:App.UIBind}"
                                 FontFamily="{Binding Path=CurrentFont}"
                                 TextColor="{Binding Path=FontColor}"
-                                Text="Decimal places:"
                                 FontSize="Medium"
                                 VerticalTextAlignment="Center" />
                     </StackLayout>

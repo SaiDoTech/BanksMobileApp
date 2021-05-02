@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinApp.Controllers;
+using XamarinApp.View;
 using XamarinApp.View.Pages;
 
 namespace XamarinApp
@@ -14,12 +15,16 @@ namespace XamarinApp
         public static FontController FontController { get; private set; }
         public static LanguageController LangController { get; private set; }
 
+        public static UIBind UIBind; 
+
         public App()
         {
             CurrentApp = this;
             ThemeController = new ThemeController();
             FontController = new FontController();
             LangController = new LanguageController();
+
+            UIBind = new UIBind(FontController, ThemeController);
 
             InitializeComponent();
 

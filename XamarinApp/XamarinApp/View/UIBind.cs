@@ -4,13 +4,13 @@ using System.Text;
 using XamarinApp.Controllers;
 using System.ComponentModel;
 using Xamarin.Forms;
+using System.Globalization;
 
 namespace XamarinApp.View
 {
     public class UIBind : INotifyPropertyChanged
     {
         public FontController fontController { get; private set; }
-        public LanguageController languageController { get; private set; }
         public ThemeController themeController { get; private set; }
 
         public string CurrentFont
@@ -64,14 +64,25 @@ namespace XamarinApp.View
             }
         }
 
+        public Color ActiveColor
+        {
+            get { return themeController.CurrentTheme.ActiveColor; }
+            set
+            {
+                if (themeController.CurrentTheme.ActiveColor != value)
+                {
+                    themeController.CurrentTheme.ActiveColor = value;
+                    OnPropertyChanged("ActiveColor");
+                }
+            }
+        }
+
         public UIBind(FontController fontController,
-                      LanguageController languageController,
                       ThemeController themeController)
         {
-            if ((fontController != null) && (languageController != null) && (themeController != null))
+            if ((fontController != null) && (themeController != null))
             {
                 this.fontController = fontController;
-                this.languageController = languageController;
                 this.themeController = themeController;
             }
             else

@@ -3,7 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinApp.View.Pages"
              xmlns:local2="clr-namespace:XamarinApp.Extensions"
-             x:Class="XamarinApp.View.Pages.NoScrollTabbedPage">
+             xmlns:local3="clr-namespace:XamarinApp"
+             x:Class="XamarinApp.View.Pages.NoScrollTabbedPage"
+            
+             BindingContext="{x:Static local3:App.UIBind}"
+             BackgroundColor="{Binding Path=BackColor}"
+             BarBackground="{Binding Path=BackColor}"
+             SelectedTabColor="{Binding Path=ActiveColor}"
+             UnselectedTabColor="{Binding Path=FontColor}">
 
     <TabbedPage.Children>
         <local:SettingsPage x:Name="settingsPage" IconImageSource="{local2:ImageResource XamarinApp.View.Images.SettingsIcon.png}"/>

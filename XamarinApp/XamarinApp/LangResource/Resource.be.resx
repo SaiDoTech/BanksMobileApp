@@ -118,36 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Login_KeyEntry_PH" xml:space="preserve">
-    <value>Verification key</value>
+    <value>Ключ пацверджання</value>
   </data>
   <data name="Login_LoginPutton_T" xml:space="preserve">
-    <value>Login</value>
+    <value>Увайсці</value>
   </data>
   <data name="Login_NameEntry_PH" xml:space="preserve">
-    <value>Bank's name</value>
+    <value>Назва банка</value>
   </data>
   <data name="Login_RegLabel_T" xml:space="preserve">
-    <value>Registry</value>
+    <value>Рэгістрацыя</value>
   </data>
   <data name="Settings_AccuracyLabel_T" xml:space="preserve">
-    <value>Accuracy</value>
+    <value>Дакладнасць</value>
   </data>
   <data name="Settings_AppLabel_T" xml:space="preserve">
-    <value>App</value>
+    <value>Праграма</value>
   </data>
   <data name="Settings_FontLabel_T" xml:space="preserve">
-    <value>Font</value>
+    <value>Шрыфт</value>
   </data>
   <data name="Settings_IntfLable_T" xml:space="preserve">
-    <value>Interface</value>
+    <value>Iнтэрфейс</value>
   </data>
   <data name="Settings_LangLabel_T" xml:space="preserve">
-    <value>Language</value>
+    <value>Мова</value>
   </data>
   <data name="Settings_SettLabel_T" xml:space="preserve">
-    <value>Settings</value>
+    <value>Налады</value>
   </data>
   <data name="Settings_ThemeLabel_T" xml:space="preserve">
-    <value>Theme</value>
+    <value>Тэма</value>
   </data>
 </root>

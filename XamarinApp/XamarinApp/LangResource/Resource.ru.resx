@@ -129,4 +129,25 @@
   <data name="Login_RegLabel_T" xml:space="preserve">
     <value>Регистрация</value>
   </data>
+  <data name="Settings_AccuracyLabel_T" xml:space="preserve">
+    <value>Точность</value>
+  </data>
+  <data name="Settings_AppLabel_T" xml:space="preserve">
+    <value>Приложение</value>
+  </data>
+  <data name="Settings_FontLabel_T" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="Settings_IntfLable_T" xml:space="preserve">
+    <value>Интерфейс</value>
+  </data>
+  <data name="Settings_LangLabel_T" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="Settings_SettLabel_T" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="Settings_ThemeLabel_T" xml:space="preserve">
+    <value>Тема</value>
+  </data>
 </root>
