@@ -4,53 +4,158 @@
              xmlns:local="clr-namespace:XamarinApp"
              x:Class="XamarinApp.View.Pages.RegistryPage"
              
-             BindingContext="{x:Static local2:App.UIBind}"
+             BindingContext="{x:Static local:App.UIBind}"
              BackgroundColor="{Binding Path=BackColor}">
     <ContentPage.Content>
-        <StackLayout Padding="10,8,10,10">
+
+        <StackLayout
+            Padding="10,8,10,8">
 
             <Label x:Name="registryLabel"
-                    BindingContext="{x:Static local:App.UIBind}"
-                    FontFamily="{Binding Path=CurrentFont}"
-                    TextColor="{Binding Path=FontColor}"
-                    FontSize="Title"
-                    TextDecorations="Underline"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    HorizontalOptions="FillAndExpand">
+                        BindingContext="{x:Static local:App.UIBind}"
+                        FontFamily="{Binding Path=CurrentFont}"
+                        TextColor="{Binding Path=FontColor}"
+                        FontSize="Title"
+                        TextDecorations="Underline"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand">
             </Label>
 
-            <Label x:Name="nameLabel"
-                    BindingContext="{x:Static local:App.UIBind}"
-                    FontFamily="{Binding Path=CurrentFont}"
-                    TextColor="{Binding Path=FontColor}"
-                    FontSize="Medium"
-                    VerticalTextAlignment="Center">
+            <Label x:Name="mainLabel"
+                       BindingContext="{x:Static local:App.UIBind}"
+                       FontFamily="{Binding Path=CurrentFont}"
+                       TextColor="{Binding Path=FontColor}"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center">
             </Label>
 
-            <Label x:Name="keyLabel"
-                    BindingContext="{x:Static local:App.UIBind}"
-                    FontFamily="{Binding Path=CurrentFont}"
-                    TextColor="{Binding Path=FontColor}"
-                    FontSize="Medium"
-                    VerticalTextAlignment="Center">
-            </Label>
+            <Frame BindingContext="{x:Static local:App.UIBind}"
+                   BackgroundColor="{Binding Path=AddColor}"
+                   Padding="8,5,8,6">
 
-            <Label x:Name="webLabel"
-                    BindingContext="{x:Static local:App.UIBind}"
-                    FontFamily="{Binding Path=CurrentFont}"
-                    TextColor="{Binding Path=FontColor}"
-                    FontSize="Medium"
-                    VerticalTextAlignment="Center">
-            </Label>
+                <StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="nameLabel"
+                        BindingContext="{x:Static local:App.UIBind}"
+                        FontFamily="{Binding Path=CurrentFont}"
+                        TextColor="{Binding Path=FontColor}"
+                        FontSize="Medium"
+                        VerticalTextAlignment="Center">
+                        </Label>
+                        <Entry x:Name="nameEntry"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                VerticalTextAlignment="Center"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="keyLabel"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            VerticalTextAlignment="Center">
+                        </Label>
+                        <Entry x:Name="keyEntry"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            VerticalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="webLabel"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            VerticalTextAlignment="Center">
+                        </Label>
+                        <Entry x:Name="webEntry"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                VerticalTextAlignment="Center"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Frame>
 
             <Label x:Name="locationLabel"
+                        BindingContext="{x:Static local:App.UIBind}"
+                        FontFamily="{Binding Path=CurrentFont}"
+                        TextColor="{Binding Path=FontColor}"
+                        FontSize="Medium"
+                        VerticalTextAlignment="Center">
+            </Label>
+
+            <Frame BindingContext="{x:Static local:App.UIBind}"
+                   BackgroundColor="{Binding Path=AddColor}"
+                   Padding="8,5,8,6">
+
+                <StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="latitudeLabel"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            VerticalTextAlignment="Center">
+                        </Label>
+                        <Entry x:Name="latitudeEntry"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                VerticalTextAlignment="Center"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="longitudeLabel"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            VerticalTextAlignment="Center">
+                        </Label>
+                        <Entry x:Name="longitudeEntry"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                VerticalTextAlignment="Center"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                </StackLayout>
+                
+            </Frame>
+
+            <Button x:Name="registryButton"
                     BindingContext="{x:Static local:App.UIBind}"
                     FontFamily="{Binding Path=CurrentFont}"
-                    TextColor="{Binding Path=FontColor}"
-                    FontSize="Medium"
-                    VerticalTextAlignment="Center">
-            </Label>
+                    TextColor="{Binding Path=BackColor}"
+                    BackgroundColor="{Binding Path=ActiveColor}"
+                    WidthRequest="220"
+                    HorizontalOptions="Center"
+                    Margin="20, 5, 20, 0"/>
 
         </StackLayout>
     </ContentPage.Content>

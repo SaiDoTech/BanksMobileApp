@@ -132,11 +132,23 @@
   <data name="Registry_KeyLabel_T" xml:space="preserve">
     <value>Verification key</value>
   </data>
+  <data name="Registry_LatitLabel_T" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
   <data name="Registry_LocationLabel_T" xml:space="preserve">
     <value>Location</value>
   </data>
+  <data name="Registry_LongLabel_T" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="Registry_MainLabel_T" xml:space="preserve">
+    <value>Main</value>
+  </data>
   <data name="Registry_NameLabel_T" xml:space="preserve">
     <value>Bank's name</value>
+  </data>
+  <data name="Registry_RegButton_T" xml:space="preserve">
+    <value>Registry</value>
   </data>
   <data name="Registry_RegistryLabel_T" xml:space="preserve">
     <value>Registry new Bank</value>

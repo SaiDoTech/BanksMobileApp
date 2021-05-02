@@ -106,6 +106,15 @@ namespace XamarinApp.LangResource {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Latitude.
+        /// </summary>
+        public static string Registry_LatitLabel_T {
+            get {
+                return ResourceManager.GetString("Registry_LatitLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Location.
         /// </summary>
         public static string Registry_LocationLabel_T {
@@ -115,11 +124,38 @@ namespace XamarinApp.LangResource {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Longitude.
+        /// </summary>
+        public static string Registry_LongLabel_T {
+            get {
+                return ResourceManager.GetString("Registry_LongLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Main.
+        /// </summary>
+        public static string Registry_MainLabel_T {
+            get {
+                return ResourceManager.GetString("Registry_MainLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Bank&apos;s name.
         /// </summary>
         public static string Registry_NameLabel_T {
             get {
                 return ResourceManager.GetString("Registry_NameLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Registry.
+        /// </summary>
+        public static string Registry_RegButton_T {
+            get {
+                return ResourceManager.GetString("Registry_RegButton_T", resourceCulture);
             }
         }
         

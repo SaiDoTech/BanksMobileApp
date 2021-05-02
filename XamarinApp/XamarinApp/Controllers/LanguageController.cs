@@ -22,7 +22,7 @@ namespace XamarinApp.Controllers
                 by
             };
 
-            Resource.Culture = new System.Globalization.CultureInfo(AppLanguages[0].CI);
+            Resource.Culture = new System.Globalization.CultureInfo(AppLanguages[1].CI);
         }
 
         public void SetNewCulture(int indx)

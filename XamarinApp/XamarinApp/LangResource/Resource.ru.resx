@@ -129,6 +129,33 @@
   <data name="Login_RegLabel_T" xml:space="preserve">
     <value>Регистрация</value>
   </data>
+  <data name="Registry_KeyLabel_T" xml:space="preserve">
+    <value>Ключ подтверждения</value>
+  </data>
+  <data name="Registry_LatitLabel_T" xml:space="preserve">
+    <value>Широта</value>
+  </data>
+  <data name="Registry_LocationLabel_T" xml:space="preserve">
+    <value>Местоположение</value>
+  </data>
+  <data name="Registry_LongLabel_T" xml:space="preserve">
+    <value>Долгота</value>
+  </data>
+  <data name="Registry_MainLabel_T" xml:space="preserve">
+    <value>Основное</value>
+  </data>
+  <data name="Registry_NameLabel_T" xml:space="preserve">
+    <value>Название банка</value>
+  </data>
+  <data name="Registry_RegButton_T" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
+  <data name="Registry_RegistryLabel_T" xml:space="preserve">
+    <value>Регистрация нового банка</value>
+  </data>
+  <data name="Registry_WebLabel_T" xml:space="preserve">
+    <value>Сайт</value>
+  </data>
   <data name="Settings_AccuracyLabel_T" xml:space="preserve">
     <value>Точность</value>
   </data>
