@@ -97,6 +97,51 @@ namespace XamarinApp.LangResource {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Verification key.
+        /// </summary>
+        public static string Registry_KeyLabel_T {
+            get {
+                return ResourceManager.GetString("Registry_KeyLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Location.
+        /// </summary>
+        public static string Registry_LocationLabel_T {
+            get {
+                return ResourceManager.GetString("Registry_LocationLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Bank&apos;s name.
+        /// </summary>
+        public static string Registry_NameLabel_T {
+            get {
+                return ResourceManager.GetString("Registry_NameLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Registry new Bank.
+        /// </summary>
+        public static string Registry_RegistryLabel_T {
+            get {
+                return ResourceManager.GetString("Registry_RegistryLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на WebSite.
+        /// </summary>
+        public static string Registry_WebLabel_T {
+            get {
+                return ResourceManager.GetString("Registry_WebLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Accuracy.
         /// </summary>
         public static string Settings_AccuracyLabel_T {

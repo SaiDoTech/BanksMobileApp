@@ -10,6 +10,7 @@ namespace XamarinApp.Model
         public int Id { get; set; }
         public string Name { get; set; }
         public string VerificationKey { get; set; }
+        public string WebSite { get; set; }
 
         public Position Location { get; set; }
         public string LogoPath { get; set; }
@@ -20,8 +21,8 @@ namespace XamarinApp.Model
         public Bank(int id,
                     string name,
                     string verificationKey,
-                    Position location,
-                    List<CurrencyExchange> currencies)
+                    string website,
+                    Position location)
         {
             if (id > 0)
                 this.Id = id;
@@ -38,26 +39,17 @@ namespace XamarinApp.Model
             else
                 throw new Exception("Please, enter Verification key!");
 
+            if (!string.IsNullOrEmpty(website) && !string.IsNullOrWhiteSpace(website))
+                this.WebSite = website;
+            else
+                throw new Exception("Please, enter Web Site!");
+
             if (location != null)
                 this.Location = location;
             else
                 throw new Exception("Please, enter Bank's location!");
 
             this.LogoPath = null;
-
-            if (currencies.Count > 0)
-            {
-                exchanges = new List<CurrencyExchange>();
-                foreach (var currency in currencies)
-                {
-                    if (currency != null)
-                    {
-                        this.exchanges.Add(currency);
-                    }
-                    else
-                        throw new Exception("Wrong currency format!");
-                }
-            }
         }
     }
 }

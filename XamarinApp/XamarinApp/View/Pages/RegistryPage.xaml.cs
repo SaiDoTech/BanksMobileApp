@@ -15,9 +15,6 @@ namespace XamarinApp.View.Pages
         public RegistryPage()
         {
             InitializeComponent();
-
-            registryPicker.SelectedIndex = 0;
-            registryPicker.TextColor = Color.FromHex("040200");
         }
     }
 }

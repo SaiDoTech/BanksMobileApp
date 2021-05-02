@@ -129,6 +129,21 @@
   <data name="Login_RegLabel_T" xml:space="preserve">
     <value>Registry</value>
   </data>
+  <data name="Registry_KeyLabel_T" xml:space="preserve">
+    <value>Verification key</value>
+  </data>
+  <data name="Registry_LocationLabel_T" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Registry_NameLabel_T" xml:space="preserve">
+    <value>Bank's name</value>
+  </data>
+  <data name="Registry_RegistryLabel_T" xml:space="preserve">
+    <value>Registry new Bank</value>
+  </data>
+  <data name="Registry_WebLabel_T" xml:space="preserve">
+    <value>WebSite</value>
+  </data>
   <data name="Settings_AccuracyLabel_T" xml:space="preserve">
     <value>Accuracy</value>
   </data>
