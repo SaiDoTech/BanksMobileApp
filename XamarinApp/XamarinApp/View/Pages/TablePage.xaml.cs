@@ -15,20 +15,6 @@ namespace XamarinApp.View.Pages
         public TablePage()
         {
             InitializeComponent();
-
-            sortPicker.SelectedIndex = 0;
-            sortPicker.TextColor = Color.FromHex("040200");
-
-            for (int i=0; i<10; i++)
-            {
-                var bankFrame = new Frame()
-                {
-                    BorderColor = Color.Black,
-                    CornerRadius = 0
-                };
-
-                bankStack.Children.Add(bankFrame);
-            }
         }
     }
 }

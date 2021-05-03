@@ -1,22 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinApp.View.Pages.TablePage">
+             xmlns:local="clr-namespace:XamarinApp"
+             x:Class="XamarinApp.View.Pages.TablePage"
+             
+             BindingContext="{x:Static local:App.UIBind}"
+             BackgroundColor="{Binding Path=BackColor}">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="10,8,10,10">
 
-            <Picker x:Name="sortPicker"
+            <Label x:Name="tableLabel"
+                    BindingContext="{x:Static local:App.UIBind}"
+                    FontFamily="{Binding Path=CurrentFont}"
+                    TextColor="{Binding Path=FontColor}"
                     FontSize="Title"
+                   Text="All Banks"
+                    TextDecorations="Underline"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="10,8,10,0">
-                <Picker.Items>
-                    <x:String>Sort By Sell</x:String>
-                    <x:String>Sort By Buy</x:String>
-                    <x:String>Show Mine</x:String>
-                </Picker.Items>
-            </Picker>
+                    HorizontalOptions="FillAndExpand">
+            </Label>
 
             <Grid Margin="10,0,10,0">
                 <Grid.ColumnDefinitions>
@@ -29,10 +32,33 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <Label Text="Bank" Grid.Row="0" Grid.Column="0"/>
-                <Label Text="Currency" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="Buy" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2"/>
-                <Label Text="Sell" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="3"/>
+                <Label Text="Bank"
+                       BindingContext="{x:Static local:App.UIBind}"
+                       FontFamily="{Binding Path=CurrentFont}"
+                       TextColor="{Binding Path=FontColor}"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+                <Label Text="Currency"
+                       BindingContext="{x:Static local:App.UIBind}"
+                       FontFamily="{Binding Path=CurrentFont}"
+                       TextColor="{Binding Path=FontColor}"
+                       HorizontalTextAlignment="End"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+                <Label Text="Buy"
+                       BindingContext="{x:Static local:App.UIBind}"
+                       FontFamily="{Binding Path=CurrentFont}"
+                       TextColor="{Binding Path=FontColor}"
+                       HorizontalTextAlignment="End"
+                       Grid.Row="0"
+                       Grid.Column="2"/>
+                <Label Text="Sell"
+                       BindingContext="{x:Static local:App.UIBind}"
+                       FontFamily="{Binding Path=CurrentFont}"
+                       TextColor="{Binding Path=FontColor}"
+                       HorizontalTextAlignment="End"
+                       Grid.Row="0"
+                       Grid.Column="3"/>
             </Grid>
 
             <ScrollView>

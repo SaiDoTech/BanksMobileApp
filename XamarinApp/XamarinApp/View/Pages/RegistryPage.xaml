@@ -148,6 +148,57 @@
                 
             </Frame>
 
+            <Label x:Name="workLabel"
+                       BindingContext="{x:Static local:App.UIBind}"
+                       FontFamily="{Binding Path=CurrentFont}"
+                       TextColor="{Binding Path=FontColor}"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center"/>
+
+            <Frame BindingContext="{x:Static local:App.UIBind}"
+                   BackgroundColor="{Binding Path=AddColor}"
+                   Padding="8,5,8,6">
+
+                <StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="fromLabel"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            VerticalTextAlignment="Center">
+                        </Label>
+                        <TimePicker x:Name="fromPicker"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="toLabel"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            VerticalTextAlignment="Center">
+                        </Label>
+                        <TimePicker x:Name="toPicker"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Frame>
+
             <Button x:Name="registryButton"
                     BindingContext="{x:Static local:App.UIBind}"
                     FontFamily="{Binding Path=CurrentFont}"

@@ -31,6 +31,9 @@ namespace XamarinApp.View.Pages
             latitudeLabel.Text = Resource.Registry_LatitLabel_T + ": ";
             longitudeLabel.Text = Resource.Registry_LongLabel_T + ": ";
             registryButton.Text = Resource.Registry_RegButton_T;
+            //workLabel.Text = Resource.Registry_workLabel_T;
+            //fromLabel.Text = Resource.Registry_fromLable_T + ": ";
+            //toLabel.Text = Resource.Registry_toLabel_T + ": ";
         }
 
         protected override void OnAppearing()

@@ -11,9 +11,10 @@ namespace XamarinApp
     public partial class App : Application
     {
         public static App CurrentApp { get; private set; }
-        public static ThemeController ThemeController { get; private set; }
-        public static FontController FontController { get; private set; }
-        public static LanguageController LangController { get; private set; }
+        public ThemeController ThemeController { get; private set; }
+        public FontController FontController { get; private set; }
+        public LanguageController LangController { get; private set; }
+        public DBaseController DBaseController { get; private set; }
 
         public static UIBind UIBind; 
 
@@ -23,6 +24,7 @@ namespace XamarinApp
             ThemeController = new ThemeController();
             FontController = new FontController();
             LangController = new LanguageController();
+            DBaseController = new DBaseController("https://geolovemaps-default-rtdb.firebaseio.com/");
 
             UIBind = new UIBind(FontController, ThemeController);
 

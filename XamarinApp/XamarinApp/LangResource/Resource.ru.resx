@@ -129,6 +129,9 @@
   <data name="Login_RegLabel_T" xml:space="preserve">
     <value>Регистрация</value>
   </data>
+  <data name="Registry_fromLable_T" xml:space="preserve">
+    <value>С</value>
+  </data>
   <data name="Registry_KeyLabel_T" xml:space="preserve">
     <value>Ключ подтверждения</value>
   </data>
@@ -153,8 +156,14 @@
   <data name="Registry_RegistryLabel_T" xml:space="preserve">
     <value>Регистрация нового банка</value>
   </data>
+  <data name="Registry_toLabel_T" xml:space="preserve">
+    <value>До</value>
+  </data>
   <data name="Registry_WebLabel_T" xml:space="preserve">
     <value>Сайт</value>
+  </data>
+  <data name="Registry_workLabel_T" xml:space="preserve">
+    <value>Время работы</value>
   </data>
   <data name="Settings_AccuracyLabel_T" xml:space="preserve">
     <value>Точность</value>

@@ -18,7 +18,7 @@ namespace XamarinApp.View.Pages
         {
             InitializeComponent();
 
-            foreach (var lang in App.LangController.AppLanguages)
+            foreach (var lang in App.CurrentApp.LangController.AppLanguages)
             {
                 langPicker.Items.Add(lang.Title);
             }
@@ -69,7 +69,7 @@ namespace XamarinApp.View.Pages
 
         private void langPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            App.LangController.SetNewCulture(langPicker.SelectedIndex);
+            App.CurrentApp.LangController.SetNewCulture(langPicker.SelectedIndex);
             ReTranslate();
         }
 

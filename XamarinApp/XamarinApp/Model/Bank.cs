@@ -5,7 +5,7 @@ using Xamarin.Forms.Maps;
 
 namespace XamarinApp.Model
 {
-    class Bank
+    public class Bank
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -15,7 +15,7 @@ namespace XamarinApp.Model
         public Position Location { get; set; }
         public string LogoPath { get; set; }
 
-        public List<CurrencyExchange> exchanges { get; set; }
+//        public List<CurrencyExchange> exchanges { get; set; }
 
 
         public Bank(int id,
@@ -50,6 +50,21 @@ namespace XamarinApp.Model
                 throw new Exception("Please, enter Bank's location!");
 
             this.LogoPath = null;
+        }
+
+        public Bank(int id,
+                    string name,
+                    string verificationKey,
+                    string website,
+                    Position location,
+                    string logopath) : this(id, name, verificationKey, website, location)
+        {
+            this.LogoPath = logopath;
+        }
+
+        public Bank()
+        {
+
         }
     }
 }

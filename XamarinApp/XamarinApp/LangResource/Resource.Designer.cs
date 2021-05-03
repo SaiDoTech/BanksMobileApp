@@ -97,6 +97,15 @@ namespace XamarinApp.LangResource {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на From.
+        /// </summary>
+        public static string Registry_fromLable_T {
+            get {
+                return ResourceManager.GetString("Registry_fromLable_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Verification key.
         /// </summary>
         public static string Registry_KeyLabel_T {
@@ -169,11 +178,29 @@ namespace XamarinApp.LangResource {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на To.
+        /// </summary>
+        public static string Registry_toLabel_T {
+            get {
+                return ResourceManager.GetString("Registry_toLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на WebSite.
         /// </summary>
         public static string Registry_WebLabel_T {
             get {
                 return ResourceManager.GetString("Registry_WebLabel_T", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Working time.
+        /// </summary>
+        public static string Registry_workLabel_T {
+            get {
+                return ResourceManager.GetString("Registry_workLabel_T", resourceCulture);
             }
         }
         

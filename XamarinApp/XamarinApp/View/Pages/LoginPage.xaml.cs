@@ -23,7 +23,7 @@ namespace XamarinApp.View.Pages
             };
             tapGesture.Tapped += (s, e) =>
             {
-                registryLabel.TextColor = App.ThemeController.CurrentTheme.ActiveColor;
+                registryLabel.TextColor = App.CurrentApp.ThemeController.CurrentTheme.ActiveColor;
                 Navigation.PushModalAsync(new RegistryPage());
             };
             registryLabel.GestureRecognizers.Add(tapGesture);
@@ -43,18 +43,18 @@ namespace XamarinApp.View.Pages
 
         public void ReColor()
         {
-            this.BackgroundColor = App.ThemeController.CurrentTheme.AddColor;
+            this.BackgroundColor = App.CurrentApp.ThemeController.CurrentTheme.AddColor;
 
-            loginEntry.TextColor = App.ThemeController.CurrentTheme.FontColor;
-            loginEntry.TextColor = App.ThemeController.CurrentTheme.FontColor;
+            loginEntry.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
+            loginEntry.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
 
-            keyEntry.TextColor = App.ThemeController.CurrentTheme.FontColor;
-            keyEntry.TextColor = App.ThemeController.CurrentTheme.FontColor;
+            keyEntry.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
+            keyEntry.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
 
-            loginButton.BackgroundColor = App.ThemeController.CurrentTheme.ActiveColor;
-            loginButton.TextColor = App.ThemeController.CurrentTheme.BackColor;
+            loginButton.BackgroundColor = App.CurrentApp.ThemeController.CurrentTheme.ActiveColor;
+            loginButton.TextColor = App.CurrentApp.ThemeController.CurrentTheme.BackColor;
 
-            registryLabel.TextColor = App.ThemeController.CurrentTheme.FontColor;
+            registryLabel.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
         }
 
         public void ReTranslate()
@@ -67,10 +67,10 @@ namespace XamarinApp.View.Pages
 
         public void ReFont()
         {
-            loginEntry.FontFamily = App.FontController.CurrentFont;
-            keyEntry.FontFamily = App.FontController.CurrentFont;
-            loginButton.FontFamily = App.FontController.CurrentFont;
-            registryLabel.FontFamily = App.FontController.CurrentFont;
+            loginEntry.FontFamily = App.CurrentApp.FontController.CurrentFont;
+            keyEntry.FontFamily = App.CurrentApp.FontController.CurrentFont;
+            loginButton.FontFamily = App.CurrentApp.FontController.CurrentFont;
+            registryLabel.FontFamily = App.CurrentApp.FontController.CurrentFont;
         }
     }
 }
