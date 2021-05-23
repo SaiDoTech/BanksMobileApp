@@ -80,52 +80,25 @@
                 </StackLayout>
             </Frame>
 
-            <Label x:Name="appLabel"
+            <Label x:Name="accountLabel"
                    BindingContext="{x:Static local2:App.UIBind}"
                    FontFamily="{Binding Path=CurrentFont}"
                    TextColor="{Binding Path=FontColor}"
                    FontSize="Medium"/>
 
-            <Frame x:Name="appFrame"
+            <Frame x:Name="accountFrame"
                    BindingContext="{x:Static local2:App.UIBind}"
                    BackgroundColor="{Binding Path=AddColor}"
-                   Padding="7,3,7,3">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.5*"/>
-                        <ColumnDefinition Width="0.5*"/>
-                    </Grid.ColumnDefinitions>
+                   Padding="7,7,7,7">
 
-                    <StackLayout Orientation="Horizontal"
-                                 Grid.Row="0"
-                                 Grid.Column="0">
-                        <Label x:Name="accuracyLabel" 
-                                BindingContext="{x:Static local2:App.UIBind}"
-                                FontFamily="{Binding Path=CurrentFont}"
-                                TextColor="{Binding Path=FontColor}"
-                                FontSize="Medium"
-                                VerticalTextAlignment="Center" />
-                        <Label x:Name="signLabel"
-                                BindingContext="{x:Static local2:App.UIBind}"
-                                FontFamily="{Binding Path=CurrentFont}"
-                                TextColor="{Binding Path=FontColor}"
-                                FontSize="Medium"
-                                VerticalTextAlignment="Center" />
-                    </StackLayout>
+                <Label x:Name="changeLabel"
+                            BindingContext="{x:Static local2:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            TextDecorations="Underline"
+                            FontSize="Medium"
+                            VerticalTextAlignment="Center" />
 
-                    <Stepper x:Name="decimalStepper"
-                             HorizontalOptions="End"
-                             Grid.Row="0"
-                             Grid.Column="1"
-                             Minimum="0" 
-                             Maximum="4" 
-                             Increment="1" 
-                             Value="2"
-                             ValueChanged="Stepper_ValueChanged"/>
-                </Grid>
             </Frame>
 
         </StackLayout>

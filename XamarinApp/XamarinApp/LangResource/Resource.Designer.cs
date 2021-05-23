@@ -178,47 +178,20 @@ namespace XamarinApp.LangResource {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на To.
+        ///   Ищет локализованную строку, похожую на Account.
         /// </summary>
-        public static string Registry_toLabel_T {
+        public static string Settings_AccountLabel_T {
             get {
-                return ResourceManager.GetString("Registry_toLabel_T", resourceCulture);
+                return ResourceManager.GetString("Settings_AccountLabel_T", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на WebSite.
+        ///   Ищет локализованную строку, похожую на Change bank data.
         /// </summary>
-        public static string Registry_WebLabel_T {
+        public static string Settings_ChangeLabel_T {
             get {
-                return ResourceManager.GetString("Registry_WebLabel_T", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Working time.
-        /// </summary>
-        public static string Registry_workLabel_T {
-            get {
-                return ResourceManager.GetString("Registry_workLabel_T", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Accuracy.
-        /// </summary>
-        public static string Settings_AccuracyLabel_T {
-            get {
-                return ResourceManager.GetString("Settings_AccuracyLabel_T", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на App.
-        /// </summary>
-        public static string Settings_AppLabel_T {
-            get {
-                return ResourceManager.GetString("Settings_AppLabel_T", resourceCulture);
+                return ResourceManager.GetString("Settings_ChangeLabel_T", resourceCulture);
             }
         }
         

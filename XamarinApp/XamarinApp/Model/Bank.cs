@@ -7,16 +7,19 @@ namespace XamarinApp.Model
 {
     public class Bank
     {
+        // System
         public int Id { get; set; }
         public string Name { get; set; }
         public string VerificationKey { get; set; }
+
+        // Info
         public string WebSite { get; set; }
-
         public Position Location { get; set; }
+        public List<CurrencyExchange> exchanges { get; set; }
+
+        // Media
         public string LogoPath { get; set; }
-
-//        public List<CurrencyExchange> exchanges { get; set; }
-
+        public string VideoUrl { get; set; }
 
         public Bank(int id,
                     string name,

@@ -35,7 +35,17 @@ namespace XamarinApp.View.Pages
                 fontPicker.Items.Add(font);
             }
             fontPicker.SelectedIndex = 0;
-            signLabel.Text = decimalStepper.Value.ToString();
+
+
+            TapGestureRecognizer tapGesture = new TapGestureRecognizer
+            {
+                NumberOfTapsRequired = 1
+            };
+            tapGesture.Tapped += (s, e) =>
+            {
+                Navigation.PushModalAsync(new EditPage());
+            };
+            changeLabel.GestureRecognizers.Add(tapGesture);
 
             ReTranslate();
         }
@@ -52,13 +62,8 @@ namespace XamarinApp.View.Pages
             langLabel.Text = Resource.Settings_LangLabel_T + ": ";
             fontLabel.Text = Resource.Settings_FontLabel_T + ": ";
             themeLabel.Text = Resource.Settings_ThemeLabel_T + ": ";
-            appLabel.Text = Resource.Settings_AppLabel_T;
-            accuracyLabel.Text = Resource.Settings_AccuracyLabel_T + ": ";
-        }
-
-        private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            signLabel.Text = decimalStepper.Value.ToString();
+            accountLabel.Text = Resource.Settings_AccountLabel_T;
+            changeLabel.Text = Resource.Settings_ChangeLabel_T; 
         }
 
         private void fontPicker_SelectedIndexChanged(object sender, EventArgs e)

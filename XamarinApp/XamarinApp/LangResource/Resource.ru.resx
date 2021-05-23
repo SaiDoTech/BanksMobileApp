@@ -156,20 +156,11 @@
   <data name="Registry_RegistryLabel_T" xml:space="preserve">
     <value>Регистрация нового банка</value>
   </data>
-  <data name="Registry_toLabel_T" xml:space="preserve">
-    <value>До</value>
+  <data name="Settings_AccountLabel_T" xml:space="preserve">
+    <value>Аккаунт</value>
   </data>
-  <data name="Registry_WebLabel_T" xml:space="preserve">
-    <value>Сайт</value>
-  </data>
-  <data name="Registry_workLabel_T" xml:space="preserve">
-    <value>Время работы</value>
-  </data>
-  <data name="Settings_AccuracyLabel_T" xml:space="preserve">
-    <value>Точность</value>
-  </data>
-  <data name="Settings_AppLabel_T" xml:space="preserve">
-    <value>Приложение</value>
+  <data name="Settings_ChangeLabel_T" xml:space="preserve">
+    <value>Изменить данные банка</value>
   </data>
   <data name="Settings_FontLabel_T" xml:space="preserve">
     <value>Шрифт</value>

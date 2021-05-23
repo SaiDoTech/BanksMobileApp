@@ -129,11 +129,11 @@
   <data name="Login_RegLabel_T" xml:space="preserve">
     <value>Рэгістрацыя</value>
   </data>
-  <data name="Settings_AccuracyLabel_T" xml:space="preserve">
-    <value>Дакладнасць</value>
+  <data name="Settings_AccountLabel_T" xml:space="preserve">
+    <value>Акаўнт</value>
   </data>
-  <data name="Settings_AppLabel_T" xml:space="preserve">
-    <value>Праграма</value>
+  <data name="Settings_ChangeLabel_T" xml:space="preserve">
+    <value>Змяніць дадзеныя банка</value>
   </data>
   <data name="Settings_FontLabel_T" xml:space="preserve">
     <value>Шрыфт</value>

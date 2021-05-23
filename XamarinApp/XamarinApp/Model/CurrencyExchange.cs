@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XamarinApp.Model
 {
-    class CurrencyExchange
+    public class CurrencyExchange
     { 
         public string CurrentCurrency { get; private set; }
         public string AnotherCurrency { get; private set; }
