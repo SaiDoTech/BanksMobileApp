@@ -83,7 +83,7 @@
                 
                 <!--LOCATION PART-->
                 <Label x:Name="locationLabel"
-                        Text="Location:"
+                        Text="Location"
                         BindingContext="{x:Static local:App.UIBind}"
                         FontFamily="{Binding Path=CurrentFont}"
                         TextColor="{Binding Path=FontColor}"
@@ -117,7 +117,7 @@
 
                         <StackLayout Orientation="Horizontal">
                             <Label x:Name="longitudeLabel"
-                                    Text="Longitude"
+                                    Text="Longitude:"
                                     BindingContext="{x:Static local:App.UIBind}"
                                     FontFamily="{Binding Path=CurrentFont}"
                                     TextColor="{Binding Path=FontColor}"
@@ -139,7 +139,7 @@
 
                 <!--CURRENCY PART-->
                 <Label x:Name="currencyLabel"
-                        Text="Currency rates:"
+                        Text="Currency rates"
                         BindingContext="{x:Static local:App.UIBind}"
                         FontFamily="{Binding Path=CurrentFont}"
                         TextColor="{Binding Path=FontColor}"
@@ -296,6 +296,98 @@
                     </Grid>
                 </Frame>
 
+                <!--MEDIA PART-->
+                <Label x:Name="mediaLabel"
+                       Text="Media"
+                       BindingContext="{x:Static local:App.UIBind}"
+                       FontFamily="{Binding Path=CurrentFont}"
+                       TextColor="{Binding Path=FontColor}"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center">
+                </Label>
+                <Frame BindingContext="{x:Static local:App.UIBind}"
+                   BackgroundColor="{Binding Path=AddColor}"
+                   Padding="8,5,8,6">
+
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="webLabel"
+                                        Text="WebSite:"
+                                        BindingContext="{x:Static local:App.UIBind}"
+                                        FontFamily="{Binding Path=CurrentFont}"
+                                        TextColor="{Binding Path=FontColor}"
+                                        FontSize="Medium"
+                                        VerticalTextAlignment="Center">
+                            </Label>
+                            <Entry x:Name="webEntry"
+                                        BindingContext="{x:Static local:App.UIBind}"
+                                        FontFamily="{Binding Path=CurrentFont}"
+                                        TextColor="{Binding Path=FontColor}"
+                                        FontSize="Medium"
+                                        VerticalTextAlignment="Center"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="logoLabel"
+                                        Text="Logo:"
+                                        BindingContext="{x:Static local:App.UIBind}"
+                                        FontFamily="{Binding Path=CurrentFont}"
+                                        TextColor="{Binding Path=FontColor}"
+                                        FontSize="Medium"
+                                        VerticalTextAlignment="Center">
+                            </Label>
+                            <Entry x:Name="logoEntry"
+                                        BindingContext="{x:Static local:App.UIBind}"
+                                        FontFamily="{Binding Path=CurrentFont}"
+                                        TextColor="{Binding Path=FontColor}"
+                                        FontSize="Medium"
+                                        VerticalTextAlignment="Center"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="FillAndExpand"/>
+                            <Button x:Name="openButton"
+                                        Text="Open.."
+                                        BindingContext="{x:Static local:App.UIBind}"
+                                        FontFamily="{Binding Path=CurrentFont}"
+                                        TextColor="{Binding Path=FontColor}"
+                                        BackgroundColor="{Binding Path=BackColor}"
+                                        WidthRequest="120"
+                                        HorizontalOptions="Center"
+                                        Margin="20, 5, 20, 0">
+                            </Button>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="videoLabel"
+                                        Text="WebSite:"
+                                        BindingContext="{x:Static local:App.UIBind}"
+                                        FontFamily="{Binding Path=CurrentFont}"
+                                        TextColor="{Binding Path=FontColor}"
+                                        FontSize="Medium"
+                                        VerticalTextAlignment="Center">
+                            </Label>
+                            <Entry x:Name="videoEntry"
+                                        BindingContext="{x:Static local:App.UIBind}"
+                                        FontFamily="{Binding Path=CurrentFont}"
+                                        TextColor="{Binding Path=FontColor}"
+                                        FontSize="Medium"
+                                        VerticalTextAlignment="Center"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Button x:Name="submitButton"
+                        Text="Submit"
+                        BindingContext="{x:Static local:App.UIBind}"
+                        FontFamily="{Binding Path=CurrentFont}"
+                        TextColor="{Binding Path=FontColor}"
+                        BackgroundColor="{Binding Path=ActiveColor}"
+                        WidthRequest="220"
+                        HorizontalOptions="Center"
+                        Margin="20, 5, 20, 0"/>
             </StackLayout>
         </ScrollView>
         
