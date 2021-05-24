@@ -1,12 +1,303 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinApp.View.Pages.EditPage">
+             xmlns:local="clr-namespace:XamarinApp"
+             x:Class="XamarinApp.View.Pages.EditPage"
+             
+             BindingContext="{x:Static local:App.UIBind}"
+             BackgroundColor="{Binding Path=BackColor}">
     <ContentPage.Content>
-        <StackLayout>
 
+        <ScrollView Orientation="Vertical">
+            <StackLayout 
+                Padding="10,8,10,8">
             
-            
-        </StackLayout>
+                <Label x:Name="editLabel"
+                        Text="Editor"
+                        BindingContext="{x:Static local:App.UIBind}"
+                        FontFamily="{Binding Path=CurrentFont}"
+                        TextColor="{Binding Path=FontColor}"
+                        FontSize="Title"
+                        TextDecorations="Underline"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand">
+                </Label>
+
+                
+                 <!-- MAIN PART-->
+                <Label x:Name="mainLabel"
+                       Text="Main"
+                       BindingContext="{x:Static local:App.UIBind}"
+                       FontFamily="{Binding Path=CurrentFont}"
+                       TextColor="{Binding Path=FontColor}"
+                       FontSize="Medium"
+                       VerticalTextAlignment="Center">
+                </Label>
+
+                <Frame BindingContext="{x:Static local:App.UIBind}"
+                   BackgroundColor="{Binding Path=AddColor}"
+                   Padding="8,5,8,6">
+
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="nameLabel"
+                                    Text="Name:"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center">
+                            </Label>
+                            <Entry x:Name="nameEntry"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="keyLabel"
+                                    Text="Verification key:"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center">
+                            </Label>
+                            <Entry x:Name="keyEntry"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                
+                <!--LOCATION PART-->
+                <Label x:Name="locationLabel"
+                        Text="Location:"
+                        BindingContext="{x:Static local:App.UIBind}"
+                        FontFamily="{Binding Path=CurrentFont}"
+                        TextColor="{Binding Path=FontColor}"
+                        FontSize="Medium"
+                        VerticalTextAlignment="Center">
+                </Label>
+
+                <Frame BindingContext="{x:Static local:App.UIBind}"
+                        BackgroundColor="{Binding Path=AddColor}"
+                        Padding="8,5,8,6">
+
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="latitudeLabel"
+                                    Text="Latitude:"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center">
+                            </Label>
+                            <Entry x:Name="latitudeEntry"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="longitudeLabel"
+                                    Text="Longitude"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center">
+                            </Label>
+                            <Entry x:Name="longitudeEntry"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+
+                <!--CURRENCY PART-->
+                <Label x:Name="currencyLabel"
+                        Text="Currency rates:"
+                        BindingContext="{x:Static local:App.UIBind}"
+                        FontFamily="{Binding Path=CurrentFont}"
+                        TextColor="{Binding Path=FontColor}"
+                        FontSize="Medium"
+                        VerticalTextAlignment="Center">
+                </Label>
+                <Frame BindingContext="{x:Static local:App.UIBind}"
+                        BackgroundColor="{Binding Path=AddColor}"
+                        Padding="8,5,8,6">
+
+                    <!--CURRENCY GRID-->
+                    <Grid Margin="10,0,10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <!--GRID HEADER-->
+                        <Label Text="Currency"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="0"
+                            Grid.Column="0"/>
+
+                        <Label Text="Buy"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="0"
+                            Grid.Column="1"/>
+
+                        <Label Text="Sell"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="0"
+                            Grid.Column="3"/>
+
+                        <!--FIRST LINE-->
+                        <Label Text="USD"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="1"
+                            Grid.Column="0"/>
+
+                        <Entry
+                            Keyboard="Numeric"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            HorizontalTextAlignment="Center"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                        />
+
+                        <Label Text="BYN"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="1"
+                            Grid.Column="2"/>
+
+                        <Entry
+                            Keyboard="Numeric"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            HorizontalTextAlignment="Center"
+                            Grid.Row="1"
+                            Grid.Column="3"
+                        />
+
+                        <Label Text="BYN"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="1"
+                            Grid.Column="4"/>
+
+                        <!--SECOND LINE-->
+                        <Label Text="EUR"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="2"
+                            Grid.Column="0"/>
+
+                        <Label Text="BYN"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="2"
+                            Grid.Column="2"/>
+
+                        <Entry
+                            Keyboard="Numeric"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            HorizontalTextAlignment="Center"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                        />
+
+                        <Label Text="BYN"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="2"
+                            Grid.Column="4"/>
+
+                        <Entry
+                            Keyboard="Numeric"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            HorizontalTextAlignment="Center"
+                            Grid.Row="2"
+                            Grid.Column="3"
+                        />
+
+                    </Grid>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>
