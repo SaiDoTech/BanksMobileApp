@@ -10,13 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace XamarinApp.View.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EditPage : ContentPage
+    public partial class BankPage : ContentPage
     {
-        public EditPage()
+        public BankPage()
         {
             InitializeComponent();
-
-            currencyPicker.SelectedIndex = 0;
         }
     }
 }

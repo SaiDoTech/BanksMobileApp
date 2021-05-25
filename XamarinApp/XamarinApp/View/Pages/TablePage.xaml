@@ -7,67 +7,78 @@
              BindingContext="{x:Static local:App.UIBind}"
              BackgroundColor="{Binding Path=BackColor}">
     <ContentPage.Content>
-        <StackLayout Padding="10,8,10,10">
 
-            <Label x:Name="tableLabel"
-                    BindingContext="{x:Static local:App.UIBind}"
-                    FontFamily="{Binding Path=CurrentFont}"
-                    TextColor="{Binding Path=FontColor}"
-                    FontSize="Title"
-                   Text="All Banks"
-                    TextDecorations="Underline"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    HorizontalOptions="FillAndExpand">
+        <StackLayout>
+
+            <Label x:Name="viewLabel"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Title"
+                           Text="All Banks"
+                            TextDecorations="Underline"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="FillAndExpand">
             </Label>
 
-            <Grid Margin="10,0,10,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.4*"/>
-                    <ColumnDefinition Width="0.2*"/>
-                    <ColumnDefinition Width="0.2*"/>
-                    <ColumnDefinition Width="0.2*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
 
-                <Label Text="Bank"
-                       BindingContext="{x:Static local:App.UIBind}"
-                       FontFamily="{Binding Path=CurrentFont}"
-                       TextColor="{Binding Path=FontColor}"
-                       Grid.Row="0"
-                       Grid.Column="0"/>
-                <Label Text="Currency"
-                       BindingContext="{x:Static local:App.UIBind}"
-                       FontFamily="{Binding Path=CurrentFont}"
-                       TextColor="{Binding Path=FontColor}"
-                       HorizontalTextAlignment="End"
-                       Grid.Row="0"
-                       Grid.Column="1"/>
-                <Label Text="Buy"
-                       BindingContext="{x:Static local:App.UIBind}"
-                       FontFamily="{Binding Path=CurrentFont}"
-                       TextColor="{Binding Path=FontColor}"
-                       HorizontalTextAlignment="End"
-                       Grid.Row="0"
-                       Grid.Column="2"/>
-                <Label Text="Sell"
-                       BindingContext="{x:Static local:App.UIBind}"
-                       FontFamily="{Binding Path=CurrentFont}"
-                       TextColor="{Binding Path=FontColor}"
-                       HorizontalTextAlignment="End"
-                       Grid.Row="0"
-                       Grid.Column="3"/>
-            </Grid>
+            <StackLayout x:Name="gridStack"
+                         Padding="10,8,10,10">
+                <ScrollView>
+                    <StackLayout>
 
-            <ScrollView>
-                <StackLayout x:Name="bankStack"
-                             Spacing="2">
-                    
-                </StackLayout>
-            </ScrollView>
-            
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+
+            <StackLayout x:Name="listStack"
+                         Padding="10,8,10,10">
+                <ScrollView>
+                    <StackLayout>
+                        <Grid Margin="10,0,10,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.4*"/>
+                                <ColumnDefinition Width="0.2*"/>
+                                <ColumnDefinition Width="0.2*"/>
+                                <ColumnDefinition Width="0.2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Bank"
+                               BindingContext="{x:Static local:App.UIBind}"
+                               FontFamily="{Binding Path=CurrentFont}"
+                               TextColor="{Binding Path=FontColor}"
+                               Grid.Row="0"
+                               Grid.Column="0"/>
+                            <Label Text="Currency"
+                               BindingContext="{x:Static local:App.UIBind}"
+                               FontFamily="{Binding Path=CurrentFont}"
+                               TextColor="{Binding Path=FontColor}"
+                               HorizontalTextAlignment="End"
+                               Grid.Row="0"
+                               Grid.Column="1"/>
+                            <Label Text="Buy"
+                               BindingContext="{x:Static local:App.UIBind}"
+                               FontFamily="{Binding Path=CurrentFont}"
+                               TextColor="{Binding Path=FontColor}"
+                               HorizontalTextAlignment="End"
+                               Grid.Row="0"
+                               Grid.Column="2"/>
+                            <Label Text="Sell"
+                               BindingContext="{x:Static local:App.UIBind}"
+                               FontFamily="{Binding Path=CurrentFont}"
+                               TextColor="{Binding Path=FontColor}"
+                               HorizontalTextAlignment="End"
+                               Grid.Row="0"
+                               Grid.Column="3"/>
+                        </Grid>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

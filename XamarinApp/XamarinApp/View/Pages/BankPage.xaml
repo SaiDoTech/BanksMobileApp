@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinApp"
+             x:Class="XamarinApp.View.Pages.BankPage"
+             
+             BindingContext="{x:Static local:App.UIBind}"
+             BackgroundColor="{Binding Path=BackColor}">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="50, 45, 50, 0">
+
+            <Frame x:Name="bankLogoFrame"
+                    BindingContext="{x:Static local:App.UIBind}"
+                    BackgroundColor="{Binding Path=AddColor}"
+                    HeightRequest="250"
+                    WidthRequest="150"/>
+
+            <Label x:Name="bankInfoLabel"
+                    Text="About:"
+                    BindingContext="{x:Static local:App.UIBind}"
+                    FontFamily="{Binding Path=CurrentFont}"
+                    TextColor="{Binding Path=FontColor}"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center"/>
+
+            <Frame x:Name="bankInfoFrame"
+                    BindingContext="{x:Static local:App.UIBind}"
+                    BackgroundColor="{Binding Path=AddColor}">
+
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="bankNameLabel"
+                                    Text="Name:"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center"/>
+                        <Label x:Name="bankUserNameLabel"
+                                    Text="SomeName"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="bankWebLabel"
+                                    Text="WebSite:"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center"/>
+                        <Label x:Name="bankUserWebLabel"
+                                    Text="google.com"
+                                    TextDecorations="Underline"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <Label x:Name="bankVideoLabel"
+                                    Text="Watch bank video"
+                                    TextDecorations="Underline"
+                                    BindingContext="{x:Static local:App.UIBind}"
+                                    FontFamily="{Binding Path=CurrentFont}"
+                                    TextColor="{Binding Path=FontColor}"
+                                    FontSize="Medium"
+                                    VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <Label x:Name="bankCurrencyLabel"
+                    Text="Exchange rates:"
+                    BindingContext="{x:Static local:App.UIBind}"
+                    FontFamily="{Binding Path=CurrentFont}"
+                    TextColor="{Binding Path=FontColor}"
+                    FontSize="Medium"
+                    VerticalTextAlignment="Center"/>
+
+            <Frame x:Name="bankCurrencyFrame"
+                    BindingContext="{x:Static local:App.UIBind}"
+                    BackgroundColor="{Binding Path=AddColor}">
+
+                <StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Text="Currency"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="0"
+                            Grid.Column="0"/>
+
+                        <Label Text="Buy"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="0"
+                            Grid.Column="1"/>
+
+                        <Label Text="Sell"
+                            HorizontalTextAlignment="Center"
+                            BindingContext="{x:Static local:App.UIBind}"
+                            FontFamily="{Binding Path=CurrentFont}"
+                            TextColor="{Binding Path=FontColor}"
+                            FontSize="Medium"
+                            Grid.Row="0"
+                            Grid.Column="3"/>
+
+                        <Label x:Name="currencyLabel"
+                               Text="USD"
+                                HorizontalTextAlignment="Center"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                Grid.Row="1"
+                                Grid.Column="0"/>
+
+                        <Label x:Name="sellLabel"
+                               Text="0.45"
+                                HorizontalTextAlignment="Center"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                Grid.Row="1"
+                                Grid.Column="1"/>
+
+                        <Label  Text="BYN"
+                                HorizontalTextAlignment="Center"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                Grid.Row="1"
+                                Grid.Column="2"/>
+
+                        <Label x:Name="buyLabel"
+                                Text="0.55"
+                                HorizontalTextAlignment="Center"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                Grid.Row="1"
+                                Grid.Column="3"/>
+
+                        <Label  Text="BYN"
+                                HorizontalTextAlignment="Center"
+                                BindingContext="{x:Static local:App.UIBind}"
+                                FontFamily="{Binding Path=CurrentFont}"
+                                TextColor="{Binding Path=FontColor}"
+                                FontSize="Medium"
+                                Grid.Row="1"
+                                Grid.Column="4"/>
+
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

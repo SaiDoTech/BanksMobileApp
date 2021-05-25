@@ -162,7 +162,6 @@
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
-                            <RowDefinition/>
                         </Grid.RowDefinitions>
 
                         <!--GRID HEADER-->
@@ -194,14 +193,20 @@
                             Grid.Column="3"/>
 
                         <!--FIRST LINE-->
-                        <Label Text="USD"
+                        <Picker x:Name="currencyPicker"
                             HorizontalTextAlignment="Center"
                             BindingContext="{x:Static local:App.UIBind}"
                             FontFamily="{Binding Path=CurrentFont}"
                             TextColor="{Binding Path=FontColor}"
                             FontSize="Medium"
                             Grid.Row="1"
-                            Grid.Column="0"/>
+                            Grid.Column="0">
+                            <Picker.Items>
+                                <x:String>USD</x:String>
+                                <x:String>EUR</x:String>
+                                <x:String>RUB</x:String>
+                            </Picker.Items>
+                        </Picker>
 
                         <Entry
                             Keyboard="Numeric"
@@ -242,57 +247,6 @@
                             FontSize="Medium"
                             Grid.Row="1"
                             Grid.Column="4"/>
-
-                        <!--SECOND LINE-->
-                        <Label Text="EUR"
-                            HorizontalTextAlignment="Center"
-                            BindingContext="{x:Static local:App.UIBind}"
-                            FontFamily="{Binding Path=CurrentFont}"
-                            TextColor="{Binding Path=FontColor}"
-                            FontSize="Medium"
-                            Grid.Row="2"
-                            Grid.Column="0"/>
-
-                        <Label Text="BYN"
-                            HorizontalTextAlignment="Center"
-                            BindingContext="{x:Static local:App.UIBind}"
-                            FontFamily="{Binding Path=CurrentFont}"
-                            TextColor="{Binding Path=FontColor}"
-                            FontSize="Medium"
-                            Grid.Row="2"
-                            Grid.Column="2"/>
-
-                        <Entry
-                            Keyboard="Numeric"
-                            BindingContext="{x:Static local:App.UIBind}"
-                            FontFamily="{Binding Path=CurrentFont}"
-                            TextColor="{Binding Path=FontColor}"
-                            FontSize="Medium"
-                            HorizontalTextAlignment="Center"
-                            Grid.Row="2"
-                            Grid.Column="1"
-                        />
-
-                        <Label Text="BYN"
-                            HorizontalTextAlignment="Center"
-                            BindingContext="{x:Static local:App.UIBind}"
-                            FontFamily="{Binding Path=CurrentFont}"
-                            TextColor="{Binding Path=FontColor}"
-                            FontSize="Medium"
-                            Grid.Row="2"
-                            Grid.Column="4"/>
-
-                        <Entry
-                            Keyboard="Numeric"
-                            BindingContext="{x:Static local:App.UIBind}"
-                            FontFamily="{Binding Path=CurrentFont}"
-                            TextColor="{Binding Path=FontColor}"
-                            FontSize="Medium"
-                            HorizontalTextAlignment="Center"
-                            Grid.Row="2"
-                            Grid.Column="3"
-                        />
-
                     </Grid>
                 </Frame>
 
