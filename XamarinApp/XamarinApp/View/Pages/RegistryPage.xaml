@@ -137,7 +137,8 @@
                     BackgroundColor="{Binding Path=ActiveColor}"
                     WidthRequest="220"
                     HorizontalOptions="Center"
-                    Margin="20, 5, 20, 0"/>
+                    Margin="20, 5, 20, 0"
+                    Clicked="registryButton_ClickedAsync"/>
 
         </StackLayout>
     </ContentPage.Content>

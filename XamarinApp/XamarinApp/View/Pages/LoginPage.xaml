@@ -8,7 +8,7 @@
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
             <Image Source="{local:ImageResource XamarinApp.View.Images.BankAppLogo.png}" />
 
-            <Entry x:Name="loginEntry"
+            <Entry x:Name="nameEntry"
                    WidthRequest="220"
                    HorizontalOptions="Center"
                    Margin="20, 10, 20, 0"/>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using XamarinApp.Model;
 
 namespace XamarinApp.Controllers
@@ -18,6 +19,11 @@ namespace XamarinApp.Controllers
 
         public UserController()
         {
+        }
+
+        public async Task<List<Bank>> GetAllBanks()
+        {
+            return await App.CurrentApp.DBaseController.GetAllBanks();
         }
     }
 }

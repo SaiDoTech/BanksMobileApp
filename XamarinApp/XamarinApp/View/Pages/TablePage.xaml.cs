@@ -24,12 +24,7 @@ namespace XamarinApp.View.Pages
 
             SetViewMode();
 
-            Banks = new List<Bank>
-            {
-                new Bank { Name="Prior", LogoPath="null"},
-                new Bank { Name="Alpha", LogoPath="null"},
-                new Bank { Name="BankOfAnarchy", LogoPath="null"}
-            };
+            Banks = App.CurrentApp.UserController.Banks;
 
             CreateList();
         }
@@ -111,22 +106,19 @@ namespace XamarinApp.View.Pages
                 grid.Children.Add(nameLabel, 0, 0);
 
                 Label currencyLabel = new Label();
-                //currencyLabel.SetBinding(Label.TextProperty, "Name");
-                currencyLabel.Text = "USD";
+                currencyLabel.SetBinding(Label.TextProperty, "Exchange.Currency");
                 currencyLabel.FontSize = Device.GetNamedSize(NamedSize.Body, currencyLabel);
                 labels.Add(currencyLabel);
                 grid.Children.Add(currencyLabel, 1, 0);
 
                 Label buyLabel = new Label();
-                //buyLabel.SetBinding(Label.TextProperty, "Name");
-                buyLabel.Text = "2.70";
+                buyLabel.SetBinding(Label.TextProperty, "Exchange.BuyPrice");
                 buyLabel.FontSize = Device.GetNamedSize(NamedSize.Body, buyLabel);
                 labels.Add(buyLabel);
                 grid.Children.Add(buyLabel, 2, 0);
 
                 Label sellLabel = new Label();
-                //sellLabel.SetBinding(Label.TextProperty, "Name");
-                sellLabel.Text = "2.69";
+                sellLabel.SetBinding(Label.TextProperty, "Exchange.SellPrice");
                 sellLabel.FontSize = Device.GetNamedSize(NamedSize.Body, sellLabel);
                 labels.Add(sellLabel);
                 grid.Children.Add(sellLabel, 4, 0);
@@ -147,7 +139,7 @@ namespace XamarinApp.View.Pages
 
             listStack.ItemSelected += (object sender, SelectedItemChangedEventArgs e) =>
             {
-                Navigation.PushModalAsync(new BankPage());
+                Navigation.PushModalAsync(new BankPage(e.SelectedItem as Bank));
             };
         }
 

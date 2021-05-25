@@ -7,15 +7,39 @@ using Xamarin.CommunityToolkit.UI.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinApp.Model;
 
 namespace XamarinApp.View.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BankPage : ContentPage
     {
-        public BankPage()
+        public BankPage(Bank bank)
         {
             InitializeComponent();
+
+            bankUserNameLabel.Text = bank.Name;
+            bankUserWebLabel.Text = bank.WebSite;
+            currencyLabel.Text = bank.Exchange.Currency;
+            sellLabel.Text = bank.Exchange.SellPrice.ToString();
+            buyLabel.Text = bank.Exchange.BuyPrice.ToString();
+
+            if (bank.LogoPath == null)
+            {
+                bankLogoFrame.Content = new Image
+                {
+                    Source = ImageSource.FromResource("XamarinApp.View.Images.BankAppLogo.png"),
+                    Aspect = Aspect.AspectFill
+                };
+            }
+            else
+            {
+                bankLogoFrame.Content = new Image
+                {
+                    Source = ImageSource.FromUri(new Uri(bank.LogoPath)),
+                    Aspect = Aspect.AspectFill
+                };
+            }
 
             TapGestureRecognizer webGesture = new TapGestureRecognizer
             {

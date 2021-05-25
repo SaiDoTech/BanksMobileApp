@@ -14,7 +14,8 @@
                     BindingContext="{x:Static local:App.UIBind}"
                     BackgroundColor="{Binding Path=AddColor}"
                     HeightRequest="250"
-                    WidthRequest="150"/>
+                    WidthRequest="150">
+            </Frame>
 
             <Label x:Name="bankInfoLabel"
                     Text="About:"
@@ -38,7 +39,6 @@
                                     FontSize="Medium"
                                     VerticalTextAlignment="Center"/>
                         <Label x:Name="bankUserNameLabel"
-                                    Text="SomeName"
                                     BindingContext="{x:Static local:App.UIBind}"
                                     FontFamily="{Binding Path=CurrentFont}"
                                     TextColor="{Binding Path=FontColor}"
@@ -54,7 +54,6 @@
                                     FontSize="Medium"
                                     VerticalTextAlignment="Center"/>
                         <Label x:Name="bankUserWebLabel"
-                                    Text="vk.com"
                                     TextDecorations="Underline"
                                     BindingContext="{x:Static local:App.UIBind}"
                                     FontFamily="{Binding Path=CurrentFont}"
@@ -126,7 +125,6 @@
                             Grid.Column="3"/>
 
                         <Label x:Name="currencyLabel"
-                               Text="USD"
                                 HorizontalTextAlignment="Center"
                                 BindingContext="{x:Static local:App.UIBind}"
                                 FontFamily="{Binding Path=CurrentFont}"
@@ -136,7 +134,6 @@
                                 Grid.Column="0"/>
 
                         <Label x:Name="sellLabel"
-                               Text="0.45"
                                 HorizontalTextAlignment="Center"
                                 BindingContext="{x:Static local:App.UIBind}"
                                 FontFamily="{Binding Path=CurrentFont}"
@@ -155,7 +152,6 @@
                                 Grid.Column="2"/>
 
                         <Label x:Name="buyLabel"
-                                Text="0.55"
                                 HorizontalTextAlignment="Center"
                                 BindingContext="{x:Static local:App.UIBind}"
                                 FontFamily="{Binding Path=CurrentFont}"

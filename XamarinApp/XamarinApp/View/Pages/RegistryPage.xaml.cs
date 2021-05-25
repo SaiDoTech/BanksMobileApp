@@ -17,17 +17,13 @@ namespace XamarinApp.View.Pages
         {
             InitializeComponent();
 
-            ReTranslateAsync();
+            ReTranslate();
         }
 
-        public async Task ReTranslateAsync()
+        public void ReTranslate()
         {
-            var location = await Geolocation.GetLastKnownLocationAsync();
-            if (location != null)
-            {
-                latitudeEntry.Text = location.Latitude.ToString();
-                longitudeEntry.Text = location.Longitude.ToString();
-            }
+            latitudeEntry.Text = "53.900609";
+            longitudeEntry.Text = "27.558953";
 
             registryLabel.Text = Resource.Registry_RegistryLabel_T;
             mainLabel.Text = Resource.Registry_MainLabel_T;
@@ -41,7 +37,32 @@ namespace XamarinApp.View.Pages
 
         protected override void OnAppearing()
         {
-            ReTranslateAsync();
+            ReTranslate();
+        }
+
+        private async void registryButton_ClickedAsync(object sender, EventArgs e)
+        {
+            var name = nameEntry.Text;
+            var key = keyEntry.Text;
+            var latitude = latitudeEntry.Text;
+            var longitude = longitudeEntry.Text;
+
+            try
+            {
+                var responce = await App.CurrentApp.DBaseController.CreateNewBank(name, key, new Xamarin.Forms.Maps.Position(Double.Parse(latitude), Double.Parse(longitude)));
+
+                if (responce)
+                {
+                    await DisplayAlert("Congratulation!", "Successful registry!", "OK!");
+                    await Navigation.PopModalAsync();
+                }
+                else
+                    throw new Exception("Something went wrong!");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Alert!", ex.Message, "OK!");
+            }
         }
     }
 }

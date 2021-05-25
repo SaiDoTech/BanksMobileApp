@@ -29,9 +29,20 @@ namespace XamarinApp.View.Pages
             registryLabel.GestureRecognizers.Add(tapGesture);
         }
 
-        private void OnLogButtonClicked(object sender, EventArgs e)
+        private async void OnLogButtonClicked(object sender, EventArgs e)
         {
-            App.CurrentApp.GotLogged();
+            var name = nameEntry.Text;
+            var key = keyEntry.Text;
+
+            var response = await App.CurrentApp.DBaseController.LogInBank(name, key);
+            if (response != null)
+            {
+                App.CurrentApp.GotLoggedAsync(response);
+            }
+            else
+            {
+                await this.DisplayAlert("Alert", "Invalid name or key!", "Try again");
+            }
         }
 
         protected override void OnAppearing()
@@ -45,8 +56,8 @@ namespace XamarinApp.View.Pages
         {
             this.BackgroundColor = App.CurrentApp.ThemeController.CurrentTheme.AddColor;
 
-            loginEntry.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
-            loginEntry.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
+            nameEntry.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
+            nameEntry.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
 
             keyEntry.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
             keyEntry.TextColor = App.CurrentApp.ThemeController.CurrentTheme.FontColor;
@@ -59,7 +70,7 @@ namespace XamarinApp.View.Pages
 
         public void ReTranslate()
         {
-            loginEntry.Placeholder = Resource.Login_NameEntry_PH;
+            nameEntry.Placeholder = Resource.Login_NameEntry_PH;
             keyEntry.Placeholder = Resource.Login_KeyEntry_PH;
             loginButton.Text = Resource.Login_LoginPutton_T;
             registryLabel.Text = Resource.Login_RegLabel_T;
@@ -67,7 +78,7 @@ namespace XamarinApp.View.Pages
 
         public void ReFont()
         {
-            loginEntry.FontFamily = App.CurrentApp.FontController.CurrentFont;
+            nameEntry.FontFamily = App.CurrentApp.FontController.CurrentFont;
             keyEntry.FontFamily = App.CurrentApp.FontController.CurrentFont;
             loginButton.FontFamily = App.CurrentApp.FontController.CurrentFont;
             registryLabel.FontFamily = App.CurrentApp.FontController.CurrentFont;

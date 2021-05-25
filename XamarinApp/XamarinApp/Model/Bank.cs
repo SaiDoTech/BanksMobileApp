@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Essentials;
 using Xamarin.Forms.Maps;
 
 namespace XamarinApp.Model
@@ -14,18 +15,28 @@ namespace XamarinApp.Model
 
         // Info
         public string WebSite { get; set; }
-        public Position Location { get; set; }
-        public List<CurrencyExchange> exchanges { get; set; }
+        public Position Position { get; set; }
+        public CurrencyExchange Exchange { get; set; }
 
         // Media
         public string LogoPath { get; set; }
         public string VideoUrl { get; set; }
 
-        public Bank(int id,
-                    string name,
-                    string verificationKey,
-                    string website,
-                    Position location)
+        // When Log In
+        public Bank(int id, string name, string verificationKey, Position position,
+                    CurrencyExchange exchange, string webSite, string logoPath, string videoUrl)
+        {
+            Id = id;
+            VerificationKey = verificationKey;
+            Position = position;
+            Exchange = exchange;
+            WebSite = webSite;
+            LogoPath = logoPath;
+            VideoUrl = videoUrl;
+        }
+
+        // When Create New Bank
+        public Bank(int id, string name, string key, Position position)
         {
             if (id > 0)
                 this.Id = id;
@@ -37,32 +48,17 @@ namespace XamarinApp.Model
             else
                 throw new Exception("Please, enter Bank's name!");
 
-            if (!string.IsNullOrEmpty(verificationKey) && !string.IsNullOrWhiteSpace(verificationKey))
-                this.VerificationKey = verificationKey;
+            if (!string.IsNullOrEmpty(key) && !string.IsNullOrWhiteSpace(key))
+                this.VerificationKey = key;
             else
                 throw new Exception("Please, enter Verification key!");
+            if (position != null)
+                this.Position = position;
 
-            if (!string.IsNullOrEmpty(website) && !string.IsNullOrWhiteSpace(website))
-                this.WebSite = website;
-            else
-                throw new Exception("Please, enter Web Site!");
-
-            if (location != null)
-                this.Location = location;
-            else
-                throw new Exception("Please, enter Bank's location!");
-
-            this.LogoPath = null;
-        }
-
-        public Bank(int id,
-                    string name,
-                    string verificationKey,
-                    string website,
-                    Position location,
-                    string logopath) : this(id, name, verificationKey, website, location)
-        {
-            this.LogoPath = logopath;
+            WebSite = null;
+            Exchange = new CurrencyExchange("USD", (decimal)0.0, (decimal)0.0);
+            LogoPath = null;
+            VideoUrl = null;
         }
 
         public Bank()

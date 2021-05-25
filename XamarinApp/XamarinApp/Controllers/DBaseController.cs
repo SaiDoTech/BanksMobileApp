@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Xamarin.Forms.Maps;
 using XamarinApp.Model;
 
 namespace XamarinApp.Controllers
@@ -31,9 +32,9 @@ namespace XamarinApp.Controllers
 
                 if (gotted != null)
                 {
-                    Bank bank = new Bank(gotted.Object.Id, gotted.Object.Name, 
-                                         gotted.Object.VerificationKey, gotted.Object.WebSite,
-                                         gotted.Object.Location, gotted.Object.LogoPath);
+                    Bank bank = new Bank(gotted.Object.Id, gotted.Object.Name,
+                                         gotted.Object.VerificationKey, gotted.Object.Position, gotted.Object.Exchange,
+                                         gotted.Object.WebSite, gotted.Object.LogoPath, gotted.Object.VideoUrl);
                     return bank;
                 }
             }
@@ -77,9 +78,11 @@ namespace XamarinApp.Controllers
                         Id = bank.Object.Id,
                         Name = bank.Object.Name,
                         VerificationKey = bank.Object.VerificationKey,
+                        Position = bank.Object.Position,
                         WebSite = bank.Object.WebSite,
-                        Location = bank.Object.Location,
-                        LogoPath = bank.Object.LogoPath
+                        LogoPath = bank.Object.LogoPath,
+                        Exchange = bank.Object.Exchange,
+                        VideoUrl = bank.Object.VideoUrl
                     }).ToList();
 
                 if (gotted != null)
@@ -128,5 +131,29 @@ namespace XamarinApp.Controllers
             else
                 return false;
         }
+    
+        public async Task<bool> CreateNewBank(string name, string key, Position position)
+        {
+            var response = await this.IsNameFree(name);
+
+            if (response)
+            {
+                var id = await this.GetBanksCount();
+                id++;
+
+                var bank = new Model.Bank(id, name, key, position);
+
+                var registered = await this.RegBank(bank);
+                if (registered)
+                    return true;
+                else
+                    return false;
+            }
+            else
+            {
+                throw new Exception("Sorry, but this name is already taken!");
+            }
+        }
+
     }
 }

@@ -6,30 +6,24 @@ namespace XamarinApp.Model
 {
     public class CurrencyExchange
     { 
-        public string CurrentCurrency { get; private set; }
-        public string AnotherCurrency { get; private set; }
-        public decimal BuyAnother { get; private set; }
-        public decimal SellAnother { get; private set; }
+        public string Currency { get; private set; }
+        public decimal BuyPrice { get; private set; }
+        public decimal SellPrice { get; private set; }
 
-        public CurrencyExchange(string current, string target, decimal buy, decimal sell)
+        public CurrencyExchange(string currency, decimal buy, decimal sell)
         {
-            if ( !(string.IsNullOrWhiteSpace(current)) && (current != null))
-                CurrentCurrency = current;
+            if (!(string.IsNullOrWhiteSpace(currency)) && (currency != null))
+                this.Currency = currency;
             else
-                throw new Exception("Wrong format for current currency!");
+                throw new Exception("Wrong format for currency!");
 
-            if (!(string.IsNullOrWhiteSpace(target)) && (target != null))
-                AnotherCurrency = target;
-            else
-                throw new Exception("Wrong format for target currency!");
-
-            if (buy > 0)
-                BuyAnother = buy;
+            if (buy >= 0)
+                BuyPrice = buy;
             else
                 throw new Exception("Wrong format for buy price currency!");
 
-            if (sell > 0)
-                SellAnother = sell;
+            if (sell >= 0)
+                SellPrice = sell;
             else
                 throw new Exception("Wrong format for sell price currency!");
         }
