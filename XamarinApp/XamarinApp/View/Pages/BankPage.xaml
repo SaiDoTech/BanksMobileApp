@@ -54,7 +54,7 @@
                                     FontSize="Medium"
                                     VerticalTextAlignment="Center"/>
                         <Label x:Name="bankUserWebLabel"
-                                    Text="google.com"
+                                    Text="vk.com"
                                     TextDecorations="Underline"
                                     BindingContext="{x:Static local:App.UIBind}"
                                     FontFamily="{Binding Path=CurrentFont}"
