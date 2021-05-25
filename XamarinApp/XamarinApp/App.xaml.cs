@@ -24,6 +24,7 @@ namespace XamarinApp
             ThemeController = new ThemeController();
             FontController = new FontController();
             LangController = new LanguageController();
+
             DBaseController = new DBaseController("https://geolovemaps-default-rtdb.firebaseio.com/");
 
             UIBind = new UIBind(FontController, ThemeController);

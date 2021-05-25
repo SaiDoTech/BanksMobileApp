@@ -5,6 +5,7 @@ using XamarinApp.Controllers;
 using System.ComponentModel;
 using Xamarin.Forms;
 using System.Globalization;
+using XamarinApp.Model;
 
 namespace XamarinApp.View
 {

@@ -5,9 +5,10 @@ using XamarinApp.Model;
 
 namespace XamarinApp.Controllers
 {
-    class UserController
+    public class UserController
     {
-        public static Bank CurrentBank { get; private set; }
+        public Bank CurrentBank { get; private set; }
+        public List<Bank> Banks { get; set; }
 
         public UserController(Bank bank)
         {
@@ -15,5 +16,8 @@ namespace XamarinApp.Controllers
                 CurrentBank = bank;
         }
 
+        public UserController()
+        {
+        }
     }
 }

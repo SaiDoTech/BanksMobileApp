@@ -15,7 +15,7 @@
                             FontFamily="{Binding Path=CurrentFont}"
                             TextColor="{Binding Path=FontColor}"
                             FontSize="Title"
-                           Text="All Banks"
+                            Text="All Banks"
                             TextDecorations="Underline"
                             VerticalTextAlignment="Center"
                             HorizontalTextAlignment="Center"
@@ -32,50 +32,57 @@
                 </ScrollView>
             </StackLayout>
 
-            <StackLayout x:Name="listStack"
+            <StackLayout x:Name="listView"
                          Padding="10,8,10,10">
-                <ScrollView>
-                    <StackLayout>
-                        <Grid Margin="10,0,10,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.4*"/>
-                                <ColumnDefinition Width="0.2*"/>
-                                <ColumnDefinition Width="0.2*"/>
-                                <ColumnDefinition Width="0.2*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
+                <Grid Margin="10,0,10,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.35*" />
+                        <ColumnDefinition Width="0.25*" />
+                        <ColumnDefinition Width="0.1*" />
+                        <ColumnDefinition Width="0.1*" />
+                        <ColumnDefinition Width="0.1*" />
+                        <ColumnDefinition Width="0.1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
 
-                            <Label Text="Bank"
+                    <Label Text="Bank"
+                               FontSize="Body"
                                BindingContext="{x:Static local:App.UIBind}"
                                FontFamily="{Binding Path=CurrentFont}"
                                TextColor="{Binding Path=FontColor}"
                                Grid.Row="0"
                                Grid.Column="0"/>
-                            <Label Text="Currency"
+                    <Label Text="Currency"
+                               FontSize="Body"
                                BindingContext="{x:Static local:App.UIBind}"
                                FontFamily="{Binding Path=CurrentFont}"
                                TextColor="{Binding Path=FontColor}"
-                               HorizontalTextAlignment="End"
                                Grid.Row="0"
                                Grid.Column="1"/>
-                            <Label Text="Buy"
+                    <Label Text="Buy"
+                               FontSize="Body"
                                BindingContext="{x:Static local:App.UIBind}"
                                FontFamily="{Binding Path=CurrentFont}"
                                TextColor="{Binding Path=FontColor}"
                                HorizontalTextAlignment="End"
                                Grid.Row="0"
                                Grid.Column="2"/>
-                            <Label Text="Sell"
+                    <Label Text="Sell"
+                               FontSize="Body"
                                BindingContext="{x:Static local:App.UIBind}"
                                FontFamily="{Binding Path=CurrentFont}"
                                TextColor="{Binding Path=FontColor}"
                                HorizontalTextAlignment="End"
                                Grid.Row="0"
-                               Grid.Column="3"/>
-                        </Grid>
-                    </StackLayout>
+                               Grid.Column="4"/>
+                </Grid>
+
+                <ScrollView>
+                    <ListView x:Name="listStack"
+                              HasUnevenRows="True">
+                    </ListView>
                 </ScrollView>
             </StackLayout>
 
