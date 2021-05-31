@@ -27,6 +27,7 @@ namespace XamarinApp.Model
                     CurrencyExchange exchange, string webSite, string logoPath, string videoUrl)
         {
             Id = id;
+            Name = name;
             VerificationKey = verificationKey;
             Position = position;
             Exchange = exchange;

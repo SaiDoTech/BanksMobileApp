@@ -209,6 +209,7 @@
                         </Picker>
 
                         <Entry
+                            x:Name="buyEntry"
                             Keyboard="Numeric"
                             BindingContext="{x:Static local:App.UIBind}"
                             FontFamily="{Binding Path=CurrentFont}"
@@ -229,6 +230,7 @@
                             Grid.Column="2"/>
 
                         <Entry
+                            x:Name="sellEntry"
                             Keyboard="Numeric"
                             BindingContext="{x:Static local:App.UIBind}"
                             FontFamily="{Binding Path=CurrentFont}"

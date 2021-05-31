@@ -113,7 +113,7 @@ namespace XamarinApp.Controllers
             {
                 var deleted = (await firebaseClient
                     .Child(BanksTable)
-                    .OnceAsync<Bank>()).Where(a => a.Object.Name == bank.Name).FirstOrDefault();
+                    .OnceAsync<Bank>()).Where(a => a.Object.Id == bank.Id).FirstOrDefault();
                 await firebaseClient.Child(BanksTable).Child(deleted.Key).DeleteAsync();
 
                 if (deleted.Object != null)

@@ -43,7 +43,7 @@ namespace XamarinApp.View.Pages
             };
             tapGesture.Tapped += (s, e) =>
             {
-                Navigation.PushModalAsync(new EditPage());
+                Navigation.PushModalAsync(new EditPage(App.CurrentApp.UserController.CurrentBank));
             };
             changeLabel.GestureRecognizers.Add(tapGesture);
 
